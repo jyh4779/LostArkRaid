@@ -62,6 +62,24 @@ class MainActivity : FragmentActivity() {
                     .replace(R.id.frameLayout,BaltanHard2Fragment())
                     .commit()
             }
+            "KK1" -> {
+                supportFragmentManager
+                    .beginTransaction()
+                    .replace(R.id.frameLayout,Kouku1Fragment())
+                    .commit()
+            }
+            "KK2" -> {
+                supportFragmentManager
+                    .beginTransaction()
+                    .replace(R.id.frameLayout,Kouku2Fragment())
+                    .commit()
+            }
+            "KK3" -> {
+                supportFragmentManager
+                    .beginTransaction()
+                    .replace(R.id.frameLayout,Kouku3Fragment())
+                    .commit()
+            }
             "BINGORESET" -> {
                 supportFragmentManager
                     .beginTransaction()

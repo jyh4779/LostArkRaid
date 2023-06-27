@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".BaltanHardFragment">
+    tools:context=".Kouku2Fragment">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -12,7 +12,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="발탄 HARD"
+            android:text="쿠크세이튼"
             android:gravity="center"
             android:textSize="28sp"
             android:textColor="@color/black"/>
@@ -22,15 +22,21 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:orientation="horizontal">
-        <TextView
+        <ImageView
+            android:id="@+id/kkStageOne"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="2"/>
+            android:layout_weight="1"
+            android:src="@drawable/stageone"/>
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
         <TextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2"
-            android:text="1관문"
+            android:text="2관문"
             android:gravity="center"
             android:textSize="24sp"
             android:textColor="@color/black"/>
@@ -39,17 +45,16 @@
             android:layout_height="match_parent"
             android:layout_weight="1"/>
         <ImageView
-            android:id="@+id/stageTwo"
+            android:id="@+id/kkStageThree"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:src="@drawable/stagetwo"/>
+            android:src="@drawable/stagethree"/>
     </LinearLayout>
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="20">
+        android:layout_weight="18">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -69,18 +74,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:src="@drawable/mulyak"/>
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:src="@drawable/seongbu"/>
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:src="@drawable/manneong"/>
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:src="@drawable/heoipok"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -90,7 +83,7 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="3"
-                    android:text="Line 45"
+                    android:text="시작 전"
                     android:gravity="left|center"
                     android:textSize="18sp"
                     android:textColor="@color/black"/>
@@ -98,59 +91,13 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="8"
-                    android:text="빨간 루가루 변신"
                     android:gravity="center"
-                    android:textSize="18sp"
-                    android:textColor="@color/black"/>
-
-                <ImageView
-                    android:id="@+id/fourFiveBtn"
-                    android:layout_width="0dp"
-                    android:layout_height="40dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:src="@drawable/down" />
-            </LinearLayout>
-            <LinearLayout
-                android:id="@+id/fourFiveText"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="2.5"
-                android:visibility="gone">
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:textSize="18sp"
-                    android:paddingTop="5dp"
-                    android:paddingLeft="5dp"
-                    android:gravity="left"
-                    android:text="보스가 가운데로 이동합니다.\n이후 장판이 생기며 변신을 합니다.\n변신이 끝날쯤 주변이 터지며 캐릭터가 눕게되니 9시에 모여 대기합니다."/>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1">
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="3"
-                    android:text="Line 40"
-                    android:gravity="left|center"
-                    android:textSize="18sp"
-                    android:textColor="@color/black"/>
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="8"
-                    android:gravity="center"
-                    android:text="파괴자 루카스 난입"
+                    android:text="자리 정하기"
                     android:textColor="@color/black"
                     android:textSize="18sp" />
 
                 <ImageView
-                    android:id="@+id/fourtyBtn"
+                    android:id="@+id/chooseWhereBtn"
                     android:layout_width="0dp"
                     android:layout_height="40dp"
                     android:layout_weight="1"
@@ -158,9 +105,9 @@
                     android:gravity="center"/>
             </LinearLayout>
             <LinearLayout
-                android:id="@+id/fourtyText"
+                android:id="@+id/chooseWhereText"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
+                android:layout_height="wrap_content"
                 android:layout_weight="2.5"
                 android:visibility="gone">
                 <TextView
@@ -170,9 +117,8 @@
                     android:paddingTop="5dp"
                     android:paddingLeft="5dp"
                     android:gravity="left"
-                    android:text="파괴자 루카스가 난입한다는 가이드가 나옵니다.\n파란색 늑대가 나타납니다.\n버프창을 확인하여 금색구슬이 생겼으면 파란 늑대를,\n생기지 않았다면 빨간 늑대를 공격합니다."/>
+                    android:text="빨파장판패턴에서 사용할 자리를 정합니다.\n왼쪽 두명, 오른쪽 두명이 필요한데\n일반적으로 파티번호 1,2번이 왼쪽\n파티번호 3,4번이 오른쪽을 사용합니다."/>
             </LinearLayout>
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
@@ -182,7 +128,7 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="3"
-                    android:text="Line 30"
+                    android:text="무작위"
                     android:gravity="left|center"
                     android:textSize="18sp"
                     android:textColor="@color/black"/>
@@ -190,12 +136,12 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="8"
-                    android:text="구슬 먹기"
+                    android:text="하얀 장판 찾기"
                     android:gravity="center"
                     android:textSize="18sp"
                     android:textColor="@color/black"/>
                 <ImageView
-                    android:id="@+id/thirtyBtn"
+                    android:id="@+id/randomBtn"
                     android:layout_width="0dp"
                     android:layout_height="40dp"
                     android:layout_weight="1"
@@ -203,9 +149,9 @@
                     android:gravity="center"/>
             </LinearLayout>
             <LinearLayout
-                android:id="@+id/thirtyText"
+                android:id="@+id/randomText"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
+                android:layout_height="wrap_content"
                 android:layout_weight="2.5"
                 android:visibility="gone">
                 <TextView
@@ -215,7 +161,51 @@
                     android:paddingTop="5dp"
                     android:paddingLeft="5dp"
                     android:gravity="left"
-                    android:text="붉은 결속을 준비한다는 가이드가 나옵니다.\n시작 전 정했던 자리에서 대기하며 구슬을 먹습니다.\n구슬을 먹고나면 보스에게 회폭을 던진 후 무력화스킬을 사용합니다."/>
+                    android:text="훌라후프에 매달린 광대들이 내려옵니다.\n광대 아래에 빨간 장판들과 한 개의 하얀 장판이 생성됩니다.\n한 개의 하얀 장판을 찾아 밟거나 장판 사이를 밟아도 괜찮습니다."/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:text="Line 125"
+                    android:gravity="left|center"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="8"
+                    android:text="세이튼 등장"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"/>
+                <ImageView
+                    android:id="@+id/oneTwoFiveBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/down"
+                    android:gravity="center"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/oneTwoFiveText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.5"
+                android:visibility="gone">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textSize="18sp"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="5dp"
+                    android:gravity="left"
+                    android:text="“뿅망치 살인마가 등장합니다” 라는 가이드가 나옵니다.\n이때부터 종종 세이튼이 공격하는 패턴이 나옵니다.\n세이튼의 공격에 낙사가 될 수 있으니 주의합니다."/>
             </LinearLayout>
 
             <LinearLayout
@@ -229,7 +219,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="3"
                     android:gravity="left|center"
-                    android:text="Line 25"
+                    android:text="Line 111"
                     android:textColor="@color/black"
                     android:textSize="18sp" />
 
@@ -237,12 +227,12 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="8"
-                    android:text="통솔자 루카스 난입"
+                    android:text="빨파 장판"
                     android:gravity="center"
                     android:textSize="18sp"
                     android:textColor="@color/black"/>
                 <ImageView
-                    android:id="@+id/twoFiveBtn"
+                    android:id="@+id/oneOneOneBtn"
                     android:layout_width="0dp"
                     android:layout_height="40dp"
                     android:layout_weight="1"
@@ -250,9 +240,9 @@
                     android:gravity="center"/>
             </LinearLayout>
             <LinearLayout
-                android:id="@+id/twoFiveText"
+                android:id="@+id/oneOneOneText"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
+                android:layout_height="wrap_content"
                 android:layout_weight="2.5"
                 android:visibility="gone">
                 <TextView
@@ -262,7 +252,7 @@
                     android:paddingTop="5dp"
                     android:paddingLeft="5dp"
                     android:gravity="left"
-                    android:text="통솔자 루카스가 난입한다는 가이드가 나옵니다.\n빨간색 늑대가 나타납니다.\n버프창을 확인하여 금색구슬이 생겼으면 빨간 늑대를,\n생기지 않았다면 파란 늑대를 공격합니다."/>
+                    android:text="먼저 세이튼이 레이저를 쏘는데, 이때 세이튼을 바라보고있으면\n공포에 걸리니 바깥쪽을 바라봅니다.\n왼쪽, 오른쪽에 장판이 두개씩 생성됩니다.\n빨간색 장판이 있으면, 두명 모두 빨간색 장판을\n빨간색 장판이 없으면, 파란색 장판을 각각 나누어 밟아줍니다."/>
             </LinearLayout>
 
             <LinearLayout
@@ -274,7 +264,7 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="3"
-                    android:text="Line 15"
+                    android:text="Line 96"
                     android:gravity="left|center"
                     android:textSize="18sp"
                     android:textColor="@color/black"/>
@@ -282,12 +272,12 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="8"
-                    android:text="구슬 먹기"
+                    android:text="쿠크 찾기"
                     android:gravity="center"
                     android:textSize="18sp"
                     android:textColor="@color/black"/>
                 <ImageView
-                    android:id="@+id/oneFiveBtn"
+                    android:id="@+id/nineSixBtn"
                     android:layout_width="0dp"
                     android:layout_height="40dp"
                     android:layout_weight="1"
@@ -295,9 +285,9 @@
                     android:gravity="center"/>
             </LinearLayout>
             <LinearLayout
-                android:id="@+id/oneFiveText"
+                android:id="@+id/nineSixText"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
+                android:layout_height="wrap_content"
                 android:layout_weight="2.5"
                 android:visibility="gone">
                 <TextView
@@ -307,7 +297,7 @@
                     android:paddingTop="5dp"
                     android:paddingLeft="5dp"
                     android:gravity="left"
-                    android:text="푸른 결속을 준비한다는 가이드가 나옵니다.\n시작 전 정했던 자리에서 대기하며 구슬을 먹습니다.\n구슬을 먹고나면 보스에게 회폭을 던진 후 무력화스킬을 사용합니다."/>
+                    android:text="바닥에 7장의 카드가 나타나며, 쿠크카드를 찾아야합니다.\n타겟이 된 파티원을 세이튼이 망치로 때리는데,\n왼쪽부터 순서대로 2번, 6번, 4번 카드를 망치로 때리도록 움직여 줍니다."/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -318,7 +308,7 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="3"
-                    android:text="Line 15 후"
+                    android:text="Line 77"
                     android:gravity="left|center"
                     android:textSize="18sp"
                     android:textColor="@color/black"/>
@@ -326,12 +316,12 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="8"
-                    android:text="검은늑대 변신"
+                    android:text="미로찾기"
                     android:gravity="center"
                     android:textSize="18sp"
                     android:textColor="@color/black"/>
                 <ImageView
-                    android:id="@+id/blackBtn"
+                    android:id="@+id/sevenSevenBtn"
                     android:layout_width="0dp"
                     android:layout_height="40dp"
                     android:layout_weight="1"
@@ -339,9 +329,9 @@
                     android:gravity="center"/>
             </LinearLayout>
             <LinearLayout
-                android:id="@+id/blackText"
+                android:id="@+id/sevenSevenText"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
+                android:layout_height="wrap_content"
                 android:layout_weight="2.5"
                 android:visibility="gone">
                 <TextView
@@ -351,8 +341,97 @@
                     android:paddingTop="5dp"
                     android:paddingLeft="5dp"
                     android:gravity="left"
-                    android:text="15줄 구슬먹기를 성공하면 보스가 변신합니다.\n보스가 포효하며 주변에 장풍을 날리며,\n바닥이 폭발합니다.\n맵 6시 끝에 모이면 폭발피해를 받지 않습니다."/>
+                    android:text="쿠크 애니메이션이 나오며 파티원 전원 미로로 이동됩니다.\n\n[브리핑 파티원]\n미로 이동 후, 가운데에 나타난 오르골을 때립니다.\n맵 전체가 보이며 각 문양별 트럼프병사의 위치를 브리핑합니다.\nex1) 스페이드 문양 트럼프 병사가 3시 방향 위치 → 스 3\nex2) 하트 문양 트럼프 병사가 5시 방향 위치 → 다 5\n\n[미로찾기 파티원]\n채팅창을 확인하여 본인의 문양에 맞는 병사를 잡아 버프 중첩을 쌓고,\n3중첩을 쌓으면 완전한 버프를 얻습니다.\n이후 랜덤하게 생성되는 문양별 탈출구를 밟아 탈출합니다.\n중간중간 나타나는 세토에 부딫히면 스택이 초기화되니 주의하여 이동합니다."/>
             </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:text="Line 55"
+                    android:gravity="left|center"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="8"
+                    android:text="피자패턴"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"/>
+                <ImageView
+                    android:id="@+id/fiveFiveBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/down"
+                    android:gravity="center"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/fiveFiveText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.5"
+                android:visibility="gone">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textSize="18sp"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="5dp"
+                    android:gravity="left"
+                    android:text="쿠크가 가운데로 이동하며, 주위에 별회전 이펙트를 3번 나타냅니다.\n별이 회전하는 방향대로 피자패턴이 진행되니,\n3번의 회전방향을 잘 기억하여 피해줍니다.\n장판에 맞으면 광기게이지와 광기장판이 생기니,\n기믹 시작될 때 이난나를 사용해줍니다."/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:text="Line 26"
+                    android:gravity="left|center"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="8"
+                    android:text="쿠크 찾기"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"/>
+                <ImageView
+                    android:id="@+id/twoSixBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/down"
+                    android:gravity="center"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/twoSixText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.5"
+                android:visibility="gone">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textSize="18sp"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="5dp"
+                    android:gravity="left"
+                    android:text="바닥에 7장의 카드가 나타나며, 쿠크카드를 찾아야합니다.\n타겟이 된 파티원을 세이튼이 망치로 때리는데,\n왼쪽부터 순서대로 2번, 6번, 4번 카드를 망치로 때리도록\n움직여 줍니다."/>
+            </LinearLayout>
+
 
         </LinearLayout>
 

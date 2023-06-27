@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".BaltanHard2Fragment">
+    tools:context=".Kouku3Fragment">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -12,7 +12,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="발탄 HARD"
+            android:text="쿠크세이튼"
             android:gravity="center"
             android:textSize="28sp"
             android:textColor="@color/black"/>
@@ -22,28 +22,34 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:orientation="horizontal">
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="2"/>
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="2"
-            android:text="2관문"
-            android:gravity="center"
-            android:textSize="24sp"
-            android:textColor="@color/black"/>
         <ImageView
-            android:id="@+id/stageOne"
+            android:id="@+id/kkStageTwo"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:src="@drawable/stageone"/>
+            android:src="@drawable/stagetwo"/>
         <ImageView
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:text="3관문"
+            android:gravity="center"
+            android:textSize="24sp"
+            android:textColor="@color/black"/>
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+        <ImageView
+            android:id="@+id/kkStageBingo"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/stagebingo"/>
     </LinearLayout>
     <ScrollView
         android:layout_width="match_parent"
@@ -68,17 +74,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:src="@drawable/mulyak"/>
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:src="@drawable/papok"/>
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:src="@drawable/sijeong"/>
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -88,7 +83,7 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="3"
-                    android:text="첫 입장"
+                    android:text="시작 전"
                     android:gravity="left|center"
                     android:textSize="18sp"
                     android:textColor="@color/black"/>
@@ -96,156 +91,23 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="8"
-                    android:text="1 갑옷 파괴"
                     android:gravity="center"
-                    android:textSize="18sp"
-                    android:textColor="@color/black"/>
-
-                <ImageView
-                    android:id="@+id/baltanTwoOneBtn"
-                    android:layout_width="0dp"
-                    android:layout_height="40dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:src="@drawable/down" />
-            </LinearLayout>
-            <LinearLayout
-                android:id="@+id/baltanTwoOneText"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="3"
-                android:visibility="gone">
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:textSize="18sp"
-                    android:paddingTop="5dp"
-                    android:paddingLeft="5dp"
-                    android:gravity="left"
-                    android:text="모든 공대원이 3시 기둥 앞에 모입니다.\n발탄이 땅을 세번 찍은 후 돌진합니다.\n땅을 찍을 때 부식폭탄을 던집니다.\n발탄이 기절하면 파괴폭탄을 던진 후, 갑옷이 깨질때까지 파괴스킬을 사용합니다."/>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1">
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="3"
-                    android:text="1 갑옷파괴 후"
-                    android:gravity="left|center"
-                    android:textSize="18sp"
-                    android:textColor="@color/black"/>
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="8"
-                    android:text="2 갑옷 파괴"
-                    android:gravity="center"
-                    android:textSize="18sp"
-                    android:textColor="@color/black"/>
-
-                <ImageView
-                    android:id="@+id/baltanTwoTwoBtn"
-                    android:layout_width="0dp"
-                    android:layout_height="40dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:src="@drawable/down" />
-            </LinearLayout>
-            <LinearLayout
-                android:id="@+id/baltanTwoTwoText"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="2.5"
-                android:visibility="gone">
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:textSize="18sp"
-                    android:paddingTop="5dp"
-                    android:paddingLeft="5dp"
-                    android:gravity="left"
-                    android:text="발탄이 땅에 착지한 후 다시 한번 돌진 준비를 합니다.\n모든 공대원이 9시 기둥(이 기둥이 깨졌을 땐 푸른 구슬이 남아있는 다른 기둥)에 모입니다.\n부식폭탄과 파괴폭탄을 사용하여 갑옷을 파괴합니다."/>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1">
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="3"
-                    android:text="Line 130"
-                    android:gravity="left|center"
-                    android:textSize="18sp"
-                    android:textColor="@color/black"/>
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="8"
-                    android:text="바훈투르 사용"
-                    android:gravity="center"
-                    android:textSize="18sp"
-                    android:textColor="@color/black"/>
-
-                <ImageView
-                    android:id="@+id/baltanTwoThreeBtn"
-                    android:layout_width="0dp"
-                    android:layout_height="40dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:src="@drawable/down" />
-            </LinearLayout>
-            <LinearLayout
-                android:id="@+id/baltanTwoThreeText"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="2.5"
-                android:visibility="gone">
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:textSize="18sp"
-                    android:paddingTop="5dp"
-                    android:paddingLeft="5dp"
-                    android:gravity="left"
-                    android:text="발탄이 도끼를 크게 휘두른 후 높이 들어 땅에 내려 찍을 준비를 합니다.\n에스더 스킬 '바훈투르'를 사용하여 피해를 막아야하니 공대장 주위에 모여 '바훈투르' 효과를 받습니다."/>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1">
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="3"
-                    android:text="Line 110"
-                    android:gravity="left|center"
-                    android:textSize="18sp"
-                    android:textColor="@color/black"/>
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="8"
-                    android:gravity="center"
-                    android:text="낙하 임포스터, 피자 패턴"
+                    android:text="기본 설정"
                     android:textColor="@color/black"
                     android:textSize="18sp" />
 
                 <ImageView
-                    android:id="@+id/baltanTwoFourBtn"
+                    android:id="@+id/defaultBtn"
                     android:layout_width="0dp"
                     android:layout_height="40dp"
                     android:layout_weight="1"
-                    android:gravity="center"
-                    android:src="@drawable/down" />
+                    android:src="@drawable/down"
+                    android:gravity="center"/>
             </LinearLayout>
             <LinearLayout
-                android:id="@+id/baltanTwoFourText"
+                android:id="@+id/defaultText"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
+                android:layout_height="wrap_content"
                 android:layout_weight="2.5"
                 android:visibility="gone">
                 <TextView
@@ -255,7 +117,7 @@
                     android:paddingTop="5dp"
                     android:paddingLeft="5dp"
                     android:gravity="left"
-                    android:text="발탄이 바깥쪽에 기둥을 만들고 공중으로 날아갑니다.\n랜덤하게 한명에게 피자패턴이 따라옵니다. 따라오던 패턴이 멈추면 패턴 밖에서 시정을 사용합니다.\n다른 공대원은 피자패턴 밖의 기둥 뒤에 숨어줍니다."/>
+                    android:text="[마리오 미니게임]\n레이드 중간에 총 4번의 마리오 미니게임이 실행됩니다.\n보스가 별모양 장판을 그리며, 불을 뿝는 광대 인형을 소환합니다.\n파티원 중 한명이 광대로 변신한 뒤, 가운데 불기둥으로 이동하면 미니게임이 시작됩니다.\n이미 미니게임을 진행한 파티원은 다시 입장이 불가능하니, 미리 정한 순서대로 입장합니다.\n\n[미니게임 조작법]\n마리오의 이동은 방향키로 가능하며, Q와 W 스킬이 있습니다.\nQ 스킬은 공격스킬로 미니게임 몬스터를 잡을 수 있습니다.\nW 스킬은 앞으로 점프를 뛰며, 낮게 날아오는 미사일과 구덩이 맵을 넘어갑니다.\n점프는 방향키를 누르지 않아도 앞으로 이동됩니다."/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -265,7 +127,7 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="3"
-                    android:text="Line 85"
+                    android:text="시작 전"
                     android:gravity="left|center"
                     android:textSize="18sp"
                     android:textColor="@color/black"/>
@@ -273,23 +135,23 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="8"
-                    android:text="지형파괴"
                     android:gravity="center"
-                    android:textSize="18sp"
-                    android:textColor="@color/black"/>
+                    android:text="마리오 정하기"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
 
                 <ImageView
-                    android:id="@+id/baltanTwoFiveBtn"
+                    android:id="@+id/chooseMarioBtn"
                     android:layout_width="0dp"
                     android:layout_height="40dp"
                     android:layout_weight="1"
-                    android:gravity="center"
-                    android:src="@drawable/down" />
+                    android:src="@drawable/down"
+                    android:gravity="center"/>
             </LinearLayout>
             <LinearLayout
-                android:id="@+id/baltanTwoFiveText"
+                android:id="@+id/chooseMarioText"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
+                android:layout_height="wrap_content"
                 android:layout_weight="2.5"
                 android:visibility="gone">
                 <TextView
@@ -299,17 +161,18 @@
                     android:paddingTop="5dp"
                     android:paddingLeft="5dp"
                     android:gravity="left"
-                    android:text="발탄이 지형을 파괴한다는 가이드가 나옵니다.\n랜덤으로 왼쪽, 오른쪽 지형이 파괴되고 이때부터는 파괴된 지형쪽으로 밀리면 낙사합니다.\n파괴되는 지형 반대방향으로 모여줍니다."/>
+                    android:text="레이드 중간중간에 나오는 마리오 미니게임 입장 순서를 정합니다.\n각 미니게임은 트리시온에 있는 베아트리스를 통해 연습이 가능합니다."/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1">
+                android:layout_weight="1"
+                android:gravity="center">
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="3"
-                    android:text="지형 파괴 후"
+                    android:text="무작위"
                     android:gravity="left|center"
                     android:textSize="18sp"
                     android:textColor="@color/black"/>
@@ -317,23 +180,22 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="8"
-                    android:text="소소한 임포스터, 피자 패턴"
+                    android:text="체력 반전"
                     android:gravity="center"
                     android:textSize="18sp"
                     android:textColor="@color/black"/>
-
                 <ImageView
-                    android:id="@+id/baltanTwoSixBtn"
+                    android:id="@+id/randomBtn"
                     android:layout_width="0dp"
                     android:layout_height="40dp"
                     android:layout_weight="1"
-                    android:gravity="center"
-                    android:src="@drawable/down" />
+                    android:src="@drawable/down"
+                    android:gravity="center"/>
             </LinearLayout>
             <LinearLayout
-                android:id="@+id/baltanTwoSixText"
+                android:id="@+id/randomText"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
+                android:layout_height="wrap_content"
                 android:layout_weight="2.5"
                 android:visibility="gone">
                 <TextView
@@ -343,17 +205,18 @@
                     android:paddingTop="5dp"
                     android:paddingLeft="5dp"
                     android:gravity="left"
-                    android:text="발탄이 가운데로 이동 후 광역기를 사용합니다.\n돌 뒤에 숨어 광역기를 피합니다.\n이후 피자패턴, 기둥 파괴가 순서대로 진행되니 바닥을 잘 확인하여 회피합니다."/>
+                    android:text="캐릭터 바닥에 빨간장판이 생성되며, 체력반전 디버프가 적용됩니다.\n디버프 시간이 끝나면, 남아있는 체력과 소모된 체력이 바뀌니,\n체력반전 디버프가 적용된 파티원은 디버프 종료 시간에 맞춰 체력을 최대한 깎아줍니다.\n\n체력은 맵 가장자리의 화상으로 깎을 수 있으나,\n너무 조금 남길 경우 남은 화상으로 사망할 수 있으니 주의합니다."/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1">
+                android:layout_weight="1"
+                android:gravity="center">
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="3"
-                    android:text="Line 65"
+                    android:text="Line 152"
                     android:gravity="left|center"
                     android:textSize="18sp"
                     android:textColor="@color/black"/>
@@ -361,23 +224,22 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="8"
-                    android:text="버러지, 카운터 패턴"
+                    android:text="[1 마리오] – 미니게임"
                     android:gravity="center"
                     android:textSize="18sp"
                     android:textColor="@color/black"/>
-
                 <ImageView
-                    android:id="@+id/baltanTwoSevenBtn"
+                    android:id="@+id/oneMarioBtn"
                     android:layout_width="0dp"
                     android:layout_height="40dp"
                     android:layout_weight="1"
-                    android:gravity="center"
-                    android:src="@drawable/down" />
+                    android:src="@drawable/down"
+                    android:gravity="center"/>
             </LinearLayout>
             <LinearLayout
-                android:id="@+id/baltanTwoSevenText"
+                android:id="@+id/oneMarioText"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
+                android:layout_height="wrap_content"
                 android:layout_weight="2.5"
                 android:visibility="gone">
                 <TextView
@@ -387,41 +249,44 @@
                     android:paddingTop="5dp"
                     android:paddingLeft="5dp"
                     android:gravity="left"
-                    android:text="발탄이 가운데로 이동 후 발로 땅을 찍습니다.\n발밑에 장판이 생기니 한 곳에 모여 장판을 피합니다.\n그후 카운터 어택으로 발탄을 저지하라는 가이드가 나오니, 카운터를 쳐줍니다."/>
+                    android:text="미리 정한 1마리오 입장 파티원이 입장합니다.\n적당량의 광기게이지를 미리 채워둔 후, 보스가 소환하는 광대 인형의 불을 맞아\n나머지 게이지를 채워줍니다.\n\n나머지 파티원이 알려주는 색깔의 공을 3개 찾아 Q스킬로 파괴합니다.\n3개의 공을 모두 파괴하지 못하면 저주에 걸린 파티원이 사망합니다.\n\n1마리오는 W스킬만 익숙하면 간단하니 빠르게 돌파합니다."/>
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1">
+                android:layout_weight="1"
+                android:gravity="center">
+
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="3"
-                    android:text="Line 30"
                     android:gravity="left|center"
-                    android:textSize="18sp"
-                    android:textColor="@color/black"/>
+                    android:text="Line 152"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="8"
-                    android:text="지형파괴"
+                    android:text="[1 마리오] – 파티원"
                     android:gravity="center"
                     android:textSize="18sp"
                     android:textColor="@color/black"/>
-
                 <ImageView
-                    android:id="@+id/baltanTwoEightBtn"
+                    android:id="@+id/oneOtherBtn"
                     android:layout_width="0dp"
                     android:layout_height="40dp"
                     android:layout_weight="1"
-                    android:gravity="center"
-                    android:src="@drawable/down" />
+                    android:src="@drawable/down"
+                    android:gravity="center"/>
             </LinearLayout>
             <LinearLayout
-                android:id="@+id/baltanTwoEightText"
+                android:id="@+id/oneOtherText"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
+                android:layout_height="wrap_content"
                 android:layout_weight="2.5"
                 android:visibility="gone">
                 <TextView
@@ -431,17 +296,19 @@
                     android:paddingTop="5dp"
                     android:paddingLeft="5dp"
                     android:gravity="left"
-                    android:text="발탄이 하늘로 올라가고 지형파괴 장판이 나옵니다.\n나머지 지형이 파괴되고 모든 방향에서 낙사합니다.\n파괴되는 지형 반대방향으로 모여줍니다.\n벽 끝으로 이동해도 낙사하지 않으니 끝에 모입니다."/>
+                    android:text="3명의 파티원 중, 머리 위에 나타나는 색깔을 채팅으로 알려줍니다.\n미니게임 입장 성공하면, 커튼콜 후 한명의 파티원이 감금됩니다.\n\n감금되지 않은 2명은 톱니바퀴를 피해 9시 보스에게 이동 후, 무력화 시켜줍니다.\n무력화가 시간안에 되지 않으면 감금된 파티원은 사망합니다."/>
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1">
+                android:layout_weight="1"
+                android:gravity="center">
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="3"
-                    android:text="Line 15"
+                    android:text="Line 125"
                     android:gravity="left|center"
                     android:textSize="18sp"
                     android:textColor="@color/black"/>
@@ -449,67 +316,22 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="8"
-                    android:text="연환파신권"
+                    android:text="[2 마리오] – 미니게임"
                     android:gravity="center"
                     android:textSize="18sp"
                     android:textColor="@color/black"/>
-
                 <ImageView
-                    android:id="@+id/baltanTwoNineBtn"
+                    android:id="@+id/twoMarioBtn"
                     android:layout_width="0dp"
                     android:layout_height="40dp"
                     android:layout_weight="1"
-                    android:gravity="center"
-                    android:src="@drawable/down" />
+                    android:src="@drawable/down"
+                    android:gravity="center"/>
             </LinearLayout>
             <LinearLayout
-                android:id="@+id/baltanTwoNineText"
+                android:id="@+id/twoMarioText"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="3"
-                android:visibility="gone">
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:textSize="18sp"
-                    android:paddingTop="5dp"
-                    android:paddingLeft="5dp"
-                    android:gravity="left"
-                    android:text="발탄이 사라졌다가 6시에 도끼를 찍으며 나타납니다.\n9시에 모여 도끼를 피한 후, 발탄의 주먹질로 생기는 장판을 피해 지형 바깥쪽으로 돌며 3시로 이동합니다.\n이후 기둥 뒤로 숨어 광역기를 피하고, 폭발하는 기둥까지 피해줍니다."/>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1">
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="3"
-                    android:text="발탄 부활 후"
-                    android:gravity="left|center"
-                    android:textSize="18sp"
-                    android:textColor="@color/black"/>
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="8"
-                    android:text="유령, 카운터"
-                    android:gravity="center"
-                    android:textSize="18sp"
-                    android:textColor="@color/black"/>
-
-                <ImageView
-                    android:id="@+id/baltanTwoTenBtn"
-                    android:layout_width="0dp"
-                    android:layout_height="40dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:src="@drawable/down" />
-            </LinearLayout>
-            <LinearLayout
-                android:id="@+id/baltanTwoTenText"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
+                android:layout_height="wrap_content"
                 android:layout_weight="2.5"
                 android:visibility="gone">
                 <TextView
@@ -519,8 +341,273 @@
                     android:paddingTop="5dp"
                     android:paddingLeft="5dp"
                     android:gravity="left"
-                    android:text="발탄이 쓰러졌다가 일어나며 체력이 40줄이 됩니다.\n낙사를 주의하며 체력을 깎아줍니다.\n지형 바깥에서 생성되는 발탄 유령의 카운터를 치며, 발탄의 방어력 버프를 없애줍니다."/>
+                    android:text="미리 정한 2마리오 입장 파티원이 입장합니다.\n적당량의 광기게이지를 미리 채워둔 후, 보스가 소환하는 광대 인형의 불을 맞아\n나머지 게이지를 채워줍니다.\n\n나머지 파티원이 알려주는 색깔의 공을 3개 찾아 Q스킬로 파괴합니다.\n3개의 공을 모두 파괴하지 못하면 저주에 걸린 파티원이 사망합니다.\n\n2마리오 역시 W스킬만 익숙하면 간단하니 빠르게 돌파합니다."/>
             </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:text="Line 125"
+                    android:gravity="left|center"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="8"
+                    android:text="[2 마리오] – 파티원"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"/>
+                <ImageView
+                    android:id="@+id/twoOtherBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/down"
+                    android:gravity="center"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/twoOtherText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.5"
+                android:visibility="gone">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textSize="18sp"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="5dp"
+                    android:gravity="left"
+                    android:text="3명의 파티원 중, 머리 위에 나타나는 색깔을 채팅으로 알려줍니다.\n미니게임 입장 성공하면, 커튼콜 후 한명의 파티원이 감금됩니다.\n\n감금되지 않은 2명은 갈고리를 피해 9시 보스에게 이동 후, 무력화 시켜줍니다.\n무력화가 시간안에 되지 않으면 감금된 파티원은 사망합니다."/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:text="Line 90"
+                    android:gravity="left|center"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="8"
+                    android:text="쇼 타임"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"/>
+                <ImageView
+                    android:id="@+id/nintyBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/down"
+                    android:gravity="center"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/nintyText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.5"
+                android:visibility="gone">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textSize="18sp"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="5dp"
+                    android:gravity="left"
+                    android:text="보스가 가운데로 이동하고 쇼타임 애니메이션이 나옵니다.\n\n[1페이즈]\n파티원 모두 6시로 이동합니다.\n랜덤하게 2명의 파티원이 타겟이 되며 미사일이 떨어집니다.\n3시 혹은 9시로 돌아 12시 방향으로 이동하며 미사일과 노란 난사장판을 피합니다.\n이후 보스가 양 옆으로 쏘는 총을 같은 방향으로 돌면서 피해줍니다.\n외곽 장판이 4번 터지면 반대방향으로 회전하니 그에 맞춰 돌아줍니다.\n\n[2페이즈]\n보스가 난사를 멈추며, 폭탄이 하나 떨어집니다.\n이 폭탄은 보스의 부채꼴 장판으로 터트려야하니\n보스와 폭탄 사이에 모였다가 부채꼴 장판이 고정되면 피해줍니다.\n폭탄은 총 두 번 떨어집니다.\n\n[3페이즈]\n파티 번호 X3 번 방향으로 움직입니다.\n과녁 표시된 공이 각 파티원을 따라다니니 다같이 시계방향으로 돌며 피해줍니다."/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:text="Line 79"
+                    android:gravity="left|center"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="8"
+                    android:text="[3 마리오] – 미니게임"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"/>
+                <ImageView
+                    android:id="@+id/threeMarioBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/down"
+                    android:gravity="center"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/threeMarioText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.5"
+                android:visibility="gone">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textSize="18sp"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="5dp"
+                    android:gravity="left"
+                    android:text="미리 정한 3마리오 입장 파티원이 입장합니다.\n적당량의 광기게이지를 미리 채워둔 후, 보스가 소환하는 광대 인형의 불을 맞아\n나머지 게이지를 채워줍니다.\n\n나머지 파티원이 알려주는 색깔의 공을 3개 찾아 Q스킬로 파괴합니다.\n3개의 공을 모두 파괴하지 못하면 저주에 걸린 파티원이 사망합니다.\n\n3 마리오는 숙련되지 않을 경우 시간이 부족할 수 있습니다.\n공략 유튜브를 시청한 후, 트리시온에서 연습하고 입장하도록 합니다."/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:text="Line 79"
+                    android:gravity="left|center"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="8"
+                    android:text="[3 마리오] – 파티원"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"/>
+                <ImageView
+                    android:id="@+id/threeOtherBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/down"
+                    android:gravity="center"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/threeOtherText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.5"
+                android:visibility="gone">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textSize="18sp"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="5dp"
+                    android:gravity="left"
+                    android:text="3명의 파티원 중, 머리 위에 나타나는 색깔을 채팅으로 알려줍니다.\n미니게임 입장 성공하면, 커튼콜 후 한명의 파티원이 감금됩니다.\n\n감금되지 않은 2명은 톱니와 갈고리를 피해 9시 보스에게 이동 후, 무력화 시켜줍니다.\n무력화가 시간안에 되지 않으면 감금된 파티원은 사망합니다."/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:text="Line 52"
+                    android:gravity="left|center"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="8"
+                    android:text="[4 마리오] – 미니게임"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"/>
+                <ImageView
+                    android:id="@+id/fourMarioBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/down"
+                    android:gravity="center"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/fourMarioText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.5"
+                android:visibility="gone">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textSize="18sp"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="5dp"
+                    android:gravity="left"
+                    android:text="미리 정한 4마리오 입장 파티원이 입장합니다.\n적당량의 광기게이지를 미리 채워둔 후, 보스가 소환하는 광대 인형의 불을 맞아\n나머지 게이지를 채워줍니다.\n\n나머지 파티원이 알려주는 색깔의 공을 3개 찾아 Q스킬로 파괴합니다.\n3개의 공을 모두 파괴하지 못하면 저주에 걸린 파티원이 사망합니다.\n\n4 마리오는 숙련되지 않을 경우 길을 잃을 수 있습니다.\n공략 유튜브를 시청한 후, 트리시온에서 연습하고 입장하도록 합니다."/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:text="Line 52"
+                    android:gravity="left|center"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="8"
+                    android:text="[4 마리오] – 파티원"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"/>
+                <ImageView
+                    android:id="@+id/fourOtherBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/down"
+                    android:gravity="center"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/fourOtherText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.5"
+                android:visibility="gone">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textSize="18sp"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="5dp"
+                    android:gravity="left"
+                    android:text="3명의 파티원 중, 머리 위에 나타나는 색깔을 채팅으로 알려줍니다.\n미니게임 입장 성공하면, 커튼콜 후 한명의 파티원이 감금됩니다.\n\n감금되지 않은 2명은 톱니와 갈고리를 피해 9시 보스에게 이동합니다.\n보스 위쪽과 아래쪽의 레버를 해제해야 무력화가 가능합니다.\n두 사람이 하나씩 맡아 아재패턴으로 레버를 해제합니다.\n아재패턴 진행 후 꼭 G키로 상호작용을 해야 레버가 해제되니 잊지 않도록 합니다."/>
+            </LinearLayout>
+
 
         </LinearLayout>
 

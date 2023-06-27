@@ -56,6 +56,9 @@ class HomeFragment : Fragment() {
         binding.btHardBtn.setOnClickListener {
             mActivity.changeFrament("BTHARD1")
         }
+        binding.kkNormalBtn.setOnClickListener {
+            mActivity.changeFrament("KK1")
+        }
 
         return binding.root
     }
