@@ -15,25 +15,47 @@
         android:textColor="@color/black"/>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1.2"
+        android:layout_height="100dp"
         android:orientation="vertical">
         <TextView
             android:id="@+id/bingoText"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:gravity="center"
             android:text="빙고판에 표시된 두개의 해골을 체크하세요."
             android:textSize="18sp"/>
         <Button
             android:id="@+id/resetBtn"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:layout_gravity="right"
             android:layout_margin="18dp"
             android:text="초기화"/>
 
     </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="match_parent"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="8"
+                android:text="Rule"
+                android:textSize="28sp"
+                android:gravity="center"/>
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:src="@drawable/down"/>
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:gravity="left"
+            android:text="1"/>
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/bingoLayout"
         android:layout_width="match_parent"

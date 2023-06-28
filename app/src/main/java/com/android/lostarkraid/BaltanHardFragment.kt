@@ -81,4 +81,8 @@ class BaltanHardFragment : Fragment() {
         //return inflater.inflate(R.layout.fragment_baltan_hard, container, false)
         return binding.root
     }
+
+    fun setClickEvent(btn:View, text:View){
+
+    }
 }
