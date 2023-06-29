@@ -7,16 +7,34 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.android.lostarkraid.databinding.FragmentBaltanHard2Binding
+import com.android.lostarkraid.databinding.FragmentBaltanHardBinding
 import com.android.lostarkraid.databinding.FragmentHomeBinding
 
 class BaltanHard2Fragment : Fragment() {
+    private lateinit var binding: FragmentBaltanHard2Binding
+    private lateinit var mActivity: MainActivity
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val binding = FragmentBaltanHard2Binding.inflate(inflater, container, false)
-        val mActivity = activity as MainActivity
+        binding = FragmentBaltanHard2Binding.inflate(inflater, container, false)
+        mActivity = activity as MainActivity
 
+        val oneTextEffectArray = arrayOf(arrayOf(0,1,3), arrayOf(53,57,4), arrayOf(74,78,4), arrayOf(96,100,4))
+        val sevenTextEffectArray = arrayOf(arrayOf(1,1,2), arrayOf(59,62,4), arrayOf(88,91,4))
+        val tenTextEffectArray = arrayOf(arrayOf(2,1,1), arrayOf(69,72,4))
+
+        mActivity.setTextEffect(oneTextEffectArray,binding.baltanTwoOneInfo)
+        mActivity.setTextEffect(sevenTextEffectArray,binding.baltanTwoSevenInfo)
+        mActivity.setTextEffect(tenTextEffectArray,binding.baltanTwoTenInfo)
+
+        setBtnEventListener()
+
+        // Inflate the layout for this fragment
+        //return inflater.inflate(R.layout.fragment_baltan_hard, container, false)
+        return binding.root
+    }
+    fun setBtnEventListener(){
         binding.baltanTwoOneBtn.setOnClickListener {
             //Log.d("onCreateView","Click 45 Line Btn")
             if(binding.baltanTwoOneText.getVisibility() == View.GONE) {
@@ -120,20 +138,5 @@ class BaltanHard2Fragment : Fragment() {
         binding.stageOne.setOnClickListener{
             mActivity.changeFrament("BTHARD1")
         }
-        // Inflate the layout for this fragment
-        //return inflater.inflate(R.layout.fragment_baltan_hard, container, false)
-        return binding.root
     }
-    /*fun btnListener(vBtn:View, vText:View){
-        vBtn.setOnClickListener {
-            //Log.d("onCreateView","Click 45 Line Btn")
-            if(vText.getVisibility() == View.GONE) {
-                vText.setVisibility(View.VISIBLE)
-                vBtn.setImageResource(R.drawable.up)
-            } else if(vText.getVisibility() == View.VISIBLE) {
-                vText.setVisibility(View.GONE)
-                vBtn.setImageResource(R.drawable.down)
-            }
-        }
-    }*/
 }

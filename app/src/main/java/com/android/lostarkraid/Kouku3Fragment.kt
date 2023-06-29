@@ -9,14 +9,22 @@ import com.android.lostarkraid.databinding.FragmentKouku3Binding
 
 class Kouku3Fragment : Fragment() {
     private lateinit var binding: FragmentKouku3Binding
+    private lateinit var mActivity: MainActivity
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentKouku3Binding.inflate(inflater, container, false)
-        val mActivity = activity as MainActivity
+        mActivity = activity as MainActivity
 
+        setBtnEventListener()
+
+        // Inflate the layout for this fragment
+        //return inflater.inflate(R.layout.fragment_baltan_hard, container, false)
+        return binding.root
+    }
+    fun setBtnEventListener(){
         binding.defaultBtn.setOnClickListener {
             if(binding.defaultText.getVisibility() == View.GONE) {
                 binding.defaultText.setVisibility(View.VISIBLE)
@@ -133,8 +141,5 @@ class Kouku3Fragment : Fragment() {
         binding.kkStageBingo.setOnClickListener {
             mActivity.changeFrament("BINGORESET")
         }
-        // Inflate the layout for this fragment
-        //return inflater.inflate(R.layout.fragment_baltan_hard, container, false)
-        return binding.root
     }
 }

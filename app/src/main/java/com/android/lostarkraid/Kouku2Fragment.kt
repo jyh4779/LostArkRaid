@@ -9,14 +9,22 @@ import com.android.lostarkraid.databinding.FragmentKouku2Binding
 
 class Kouku2Fragment : Fragment() {
     private lateinit var binding: FragmentKouku2Binding
+    private lateinit var mActivity: MainActivity
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentKouku2Binding.inflate(inflater, container, false)
-        val mActivity = activity as MainActivity
+        mActivity = activity as MainActivity
 
+        setBtnEventListener()
+
+        // Inflate the layout for this fragment
+        //return inflater.inflate(R.layout.fragment_baltan_hard, container, false)
+        return binding.root
+    }
+    fun setBtnEventListener(){
         binding.chooseWhereBtn.setOnClickListener {
             if(binding.chooseWhereText.getVisibility() == View.GONE) {
                 binding.chooseWhereText.setVisibility(View.VISIBLE)
@@ -103,8 +111,5 @@ class Kouku2Fragment : Fragment() {
         binding.kkStageThree.setOnClickListener {
             mActivity.changeFrament("KK3")
         }
-        // Inflate the layout for this fragment
-        //return inflater.inflate(R.layout.fragment_baltan_hard, container, false)
-        return binding.root
     }
 }

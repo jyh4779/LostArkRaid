@@ -7,8 +7,7 @@
     tools:context=".BaltanHard2Fragment">
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1">
+        android:layout_height="50dp">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -19,13 +18,19 @@
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_height="40dp"
         android:orientation="horizontal">
-        <TextView
+        <ImageView
+            android:id="@+id/stageOne"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="2"/>
+            android:src="@drawable/stageone"
+            android:layout_weight="1"/>
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
         <TextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -35,11 +40,9 @@
             android:textSize="24sp"
             android:textColor="@color/black"/>
         <ImageView
-            android:id="@+id/stageOne"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:src="@drawable/stageone"/>
+            android:layout_weight="1"/>
         <ImageView
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -114,6 +117,8 @@
                 android:layout_weight="3"
                 android:visibility="gone">
                 <TextView
+                    android:id="@+id/baltanTwoOneInfo"
+                    android:bufferType="spannable"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:textSize="18sp"
@@ -129,7 +134,7 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="3"
-                    android:text="1 갑옷파괴 후"
+                    android:text="갑옷파괴 후"
                     android:gravity="left|center"
                     android:textSize="18sp"
                     android:textColor="@color/black"/>
@@ -373,6 +378,8 @@
                 android:layout_weight="2.5"
                 android:visibility="gone">
                 <TextView
+                    android:id="@+id/baltanTwoSevenInfo"
+                    android:bufferType="spannable"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:textSize="18sp"
@@ -502,6 +509,8 @@
                 android:layout_weight="2.5"
                 android:visibility="gone">
                 <TextView
+                    android:id="@+id/baltanTwoTenInfo"
+                    android:bufferType="spannable"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:textSize="18sp"

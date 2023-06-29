@@ -7,8 +7,7 @@
     tools:context=".BaltanHardFragment">
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1">
+        android:layout_height="50dp">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -19,8 +18,7 @@
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_height="40dp"
         android:orientation="horizontal">
         <TextView
             android:layout_width="0dp"
@@ -117,20 +115,19 @@
                 android:layout_weight="2.5"
                 android:visibility="gone">
                 <TextView
-                    android:id="@+id/fourFiveInfo"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:textSize="18sp"
                     android:paddingTop="5dp"
                     android:paddingLeft="5dp"
                     android:gravity="left"
-                    android:bufferType="spannable"
                     android:text="보스가 가운데로 이동합니다.\n이후 장판이 생기며 변신을 합니다.\n변신이 끝날쯤 주변이 터지며 캐릭터가 눕게되니 9시에 모여 대기합니다."/>
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="40dp">
+                android:layout_height="40dp"
+                android:background="@color/gray">
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
@@ -139,7 +136,6 @@
                     android:gravity="left|center"
                     android:textSize="18sp"
                     android:textColor="@color/black"/>
-
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
@@ -160,23 +156,25 @@
             <LinearLayout
                 android:id="@+id/fourtyText"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="2.5"
+                android:layout_height="wrap_content"
                 android:visibility="gone">
                 <TextView
+                    android:id="@+id/fourtyInfo"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:textSize="18sp"
                     android:paddingTop="5dp"
                     android:paddingLeft="5dp"
                     android:gravity="left"
+                    android:bufferType="spannable"
                     android:text="파괴자 루카스가 난입한다는 가이드가 나옵니다.\n파란색 늑대가 나타납니다.\n버프창을 확인하여 금색구슬이 생겼으면 파란 늑대를,\n생기지 않았다면 빨간 늑대를 공격합니다."/>
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:gravity="center">
+                android:gravity="center"
+                android:background="@color/gray">
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
@@ -204,8 +202,7 @@
             <LinearLayout
                 android:id="@+id/thirtyText"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="2.5"
+                android:layout_height="wrap_content"
                 android:visibility="gone">
                 <TextView
                     android:layout_width="match_parent"
@@ -220,7 +217,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:gravity="center">
+                android:gravity="center"
+                android:background="@color/gray">
 
                 <TextView
                     android:layout_width="0dp"
@@ -250,15 +248,16 @@
             <LinearLayout
                 android:id="@+id/twoFiveText"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="2.5"
+                android:layout_height="wrap_content"
                 android:visibility="gone">
                 <TextView
+                    android:id="@+id/twoFiveInfo"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:textSize="18sp"
                     android:paddingTop="5dp"
                     android:paddingLeft="5dp"
+                    android:bufferType="spannable"
                     android:gravity="left"
                     android:text="통솔자 루카스가 난입한다는 가이드가 나옵니다.\n빨간색 늑대가 나타납니다.\n버프창을 확인하여 금색구슬이 생겼으면 빨간 늑대를,\n생기지 않았다면 파란 늑대를 공격합니다."/>
             </LinearLayout>
@@ -266,7 +265,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:gravity="center">
+                android:gravity="center"
+                android:background="@color/gray">
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
@@ -309,7 +309,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:gravity="center">
+                android:gravity="center"
+                android:background="@color/gray">
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"

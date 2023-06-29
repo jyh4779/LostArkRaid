@@ -7,8 +7,7 @@
     tools:context=".Kouku1Fragment">
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1">
+        android:layout_height="50dp">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -19,8 +18,7 @@
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_height="40dp"
         android:orientation="horizontal">
         <TextView
             android:layout_width="0dp"
@@ -104,7 +102,6 @@
                 android:id="@+id/defaultText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="2.5"
                 android:visibility="gone">
                 <TextView
                     android:layout_width="match_parent"
@@ -194,6 +191,8 @@
                 android:layout_weight="2.5"
                 android:visibility="gone">
                 <TextView
+                    android:id="@+id/oneTwoEightInfo"
+                    android:bufferType="spannable"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:textSize="18sp"
@@ -240,6 +239,8 @@
                 android:layout_weight="2.5"
                 android:visibility="gone">
                 <TextView
+                    android:id="@+id/oneOneTwoInfo"
+                    android:bufferType="spannable"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:textSize="18sp"
@@ -284,13 +285,15 @@
                 android:layout_weight="2.5"
                 android:visibility="gone">
                 <TextView
+                    android:id="@+id/eightEightInfo"
+                    android:bufferType="spannable"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:textSize="18sp"
                     android:paddingTop="5dp"
                     android:paddingLeft="5dp"
                     android:gravity="left"
-                    android:text="화면이 전환되며 모든 파티원이 광대로 변합니다.\n캐릭터 머리위의 카드모양을 확인하여 동일한 카드모양 위로 이동합니다.\n보스가 박수를 치다 멈춘 뒤 하는 동작을 확인합니다.\n보스가 정면을 보고있으면 스킬창을 확인하여 따라하고,\n보스가 뒤를 보고있으면 보스가 수행한 동작 외에 다른 동작을 수행합니다.\n스킬별 동작은 매 번, 모든 파티원 마다 다르니 이점 참고합니다."/>
+                    android:text="화면이 전환되며 모든 파티원이 광대로 변합니다.\n캐릭터 머리위의 카드모양을 확인하여 동일한 카드모양 위로 이동합니다.\n보스가 박수를 치다 멈춘 뒤 하는 동작을 확인합니다.\n보스가 정면을 보고있으면 스킬창을 확인하여 따라하고,\n보스가 뒤를 보고있으면 보스가 수행한 동작 외에 다른 동작을 수행합니다.\n스킬별 동작은 매 번, 모든 파티원이 다르니 이점 참고합니다."/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -327,6 +330,8 @@
                 android:layout_weight="2.5"
                 android:visibility="gone">
                 <TextView
+                    android:id="@+id/sixtyInfo"
+                    android:bufferType="spannable"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:textSize="18sp"
@@ -370,6 +375,8 @@
                 android:layout_weight="2.5"
                 android:visibility="gone">
                 <TextView
+                    android:id="@+id/fourEightInfo"
+                    android:bufferType="spannable"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:textSize="18sp"
@@ -413,6 +420,8 @@
                 android:layout_weight="2.5"
                 android:visibility="gone">
                 <TextView
+                    android:id="@+id/twoTwoInfo"
+                    android:bufferType="spannable"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:textSize="18sp"
@@ -456,6 +465,8 @@
                 android:layout_weight="2.5"
                 android:visibility="gone">
                 <TextView
+                    android:id="@+id/cardInfo"
+                    android:bufferType="spannable"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:textSize="18sp"

@@ -1,25 +1,46 @@
 package com.android.lostarkraid
 
+import android.app.Activity
+import android.graphics.Color
+import android.graphics.Typeface
 import android.os.Bundle
-import android.util.Log
+import android.text.SpannableStringBuilder
+import android.text.Spanned
+import android.text.style.ForegroundColorSpan
+import android.text.style.StyleSpan
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import com.android.lostarkraid.databinding.FragmentBaltanHardBinding
-import com.android.lostarkraid.databinding.FragmentHomeBinding
 
 
 class BaltanHardFragment : Fragment() {
 
     private lateinit var binding: FragmentBaltanHardBinding
+    private lateinit var mActivity: MainActivity
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentBaltanHardBinding.inflate(inflater, container, false)
-        val mActivity = activity as MainActivity
+        mActivity = activity as MainActivity
 
+        val fourtyTextEffectArray = arrayOf(arrayOf(0,1,3), arrayOf(26,29,2), arrayOf(62,64,2), arrayOf(78,81,1))
+        val twoFiveTextEffectArray = arrayOf(arrayOf(1,1,3), arrayOf(26,29,1), arrayOf(62,64,1), arrayOf(78,81,2))
+
+        mActivity.setTextEffect(fourtyTextEffectArray,binding.fourtyInfo)
+        mActivity.setTextEffect(twoFiveTextEffectArray,binding.twoFiveInfo)
+
+        setBtnEventListener()
+
+        // Inflate the layout for this fragment
+        //return inflater.inflate(R.layout.fragment_baltan_hard, container, false)
+        return binding.root
+    }
+    fun setBtnEventListener(){
         binding.fourFiveBtn.setOnClickListener {
             if(binding.fourFiveText.getVisibility() == View.GONE) {
                 binding.fourFiveText.setVisibility(View.VISIBLE)
@@ -60,7 +81,7 @@ class BaltanHardFragment : Fragment() {
             if(binding.oneFiveText.getVisibility() == View.GONE) {
                 binding.oneFiveText.setVisibility(View.VISIBLE)
                 binding.oneFiveBtn.setImageResource(R.drawable.up)
-            } else if(binding.twoFiveText.getVisibility() == View.VISIBLE) {
+            } else if(binding.oneFiveText.getVisibility() == View.VISIBLE) {
                 binding.oneFiveText.setVisibility(View.GONE)
                 binding.oneFiveBtn.setImageResource(R.drawable.down)
             }
@@ -77,12 +98,5 @@ class BaltanHardFragment : Fragment() {
         binding.stageTwo.setOnClickListener{
             mActivity.changeFrament("BTHARD2")
         }
-        // Inflate the layout for this fragment
-        //return inflater.inflate(R.layout.fragment_baltan_hard, container, false)
-        return binding.root
-    }
-
-    fun setClickEvent(btn:View, text:View){
-
     }
 }
