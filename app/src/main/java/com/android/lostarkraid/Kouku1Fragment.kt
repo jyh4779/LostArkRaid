@@ -25,8 +25,8 @@ class Kouku1Fragment : Fragment() {
         val sixtyTextEffectArray = arrayOf(arrayOf(0,1,2), arrayOf(17,20,4), arrayOf(32,35,4))
         val fourEightTextEffectArray = arrayOf(arrayOf(0,1,2), arrayOf(127,130,4), arrayOf(140,142,4))
         val twoTwoTextEffectArray = arrayOf(arrayOf(0,1,5), arrayOf(48,53,4), arrayOf(59,62,1), arrayOf(103,105,1), arrayOf(111,112,4), arrayOf(157,173,4))
-        val cardTextEffectArray = arrayOf(arrayOf(0,1,10), arrayOf(87,99,4), arrayOf(116,125,4), arrayOf(188,202,4), arrayOf(223,243,4),
-            arrayOf(284,287,4), arrayOf(325,328,4), arrayOf(349,351,4), arrayOf(351,353,1), arrayOf(358,360,1), arrayOf(360,362,4))
+        val cardTextEffectArray = arrayOf(arrayOf(0,1,10), arrayOf(87,99,4), arrayOf(116,125,4), arrayOf(188,202,4), arrayOf(223,242,4),
+            arrayOf(286,289,4), arrayOf(327,330,4), arrayOf(351,353,2), arrayOf(353,355,1), arrayOf(359,361,1), arrayOf(361,363,2))
 
         mActivity.setTextEffect(oneTwoEightTextEffectArray,binding.oneTwoEightInfo)
         mActivity.setTextEffect(oneOneTwoTextEffectArray, binding.oneOneTwoInfo)

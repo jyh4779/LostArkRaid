@@ -74,7 +74,8 @@
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="40dp">
+                android:layout_height="40dp"
+                android:background="@color/gray">
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
@@ -107,6 +108,8 @@
                 android:layout_weight="2.5"
                 android:visibility="gone">
                 <TextView
+                    android:id="@+id/defaultInfo"
+                    android:bufferType="spannable"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:textSize="18sp"
@@ -117,7 +120,8 @@
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="40dp">
+                android:layout_height="40dp"
+                android:background="@color/gray">
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
@@ -150,6 +154,8 @@
                 android:layout_weight="2.5"
                 android:visibility="gone">
                 <TextView
+                    android:id="@+id/chooseMarioInfo"
+                    android:bufferType="spannable"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:textSize="18sp"
@@ -161,7 +167,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:gravity="center">
+                android:gravity="center"
+                android:background="@color/gray">
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
@@ -193,6 +200,8 @@
                 android:layout_weight="2.5"
                 android:visibility="gone">
                 <TextView
+                    android:id="@+id/randomInfo"
+                    android:bufferType="spannable"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:textSize="18sp"
@@ -204,7 +213,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:gravity="center">
+                android:gravity="center"
+                android:background="@color/gray">
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
@@ -236,6 +246,8 @@
                 android:layout_weight="2.5"
                 android:visibility="gone">
                 <TextView
+                    android:id="@+id/oneMarioInfo"
+                    android:bufferType="spannable"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:textSize="18sp"
@@ -248,7 +260,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:gravity="center">
+                android:gravity="center"
+                android:background="@color/gray">
 
                 <TextView
                     android:layout_width="0dp"
@@ -282,6 +295,8 @@
                 android:layout_weight="2.5"
                 android:visibility="gone">
                 <TextView
+                    android:id="@+id/oneOtherInfo"
+                    android:bufferType="spannable"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:textSize="18sp"
@@ -294,7 +309,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:gravity="center">
+                android:gravity="center"
+                android:background="@color/gray">
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
@@ -326,6 +342,8 @@
                 android:layout_weight="2.5"
                 android:visibility="gone">
                 <TextView
+                    android:id="@+id/twoMarioInfo"
+                    android:bufferType="spannable"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:textSize="18sp"
@@ -337,7 +355,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:gravity="center">
+                android:gravity="center"
+                android:background="@color/gray">
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
@@ -369,6 +388,8 @@
                 android:layout_weight="2.5"
                 android:visibility="gone">
                 <TextView
+                    android:id="@+id/twoOtherInfo"
+                    android:bufferType="spannable"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:textSize="18sp"
@@ -380,7 +401,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:gravity="center">
+                android:gravity="center"
+                android:background="@color/gray">
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
@@ -412,18 +434,21 @@
                 android:layout_weight="2.5"
                 android:visibility="gone">
                 <TextView
+                    android:id="@+id/nintyInfo"
+                    android:bufferType="spannable"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:textSize="18sp"
                     android:paddingTop="5dp"
                     android:paddingLeft="5dp"
                     android:gravity="left"
-                    android:text="보스가 가운데로 이동하고 쇼타임 애니메이션이 나옵니다.\n\n[1페이즈]\n파티원 모두 6시로 이동합니다.\n랜덤하게 2명의 파티원이 타겟이 되며 미사일이 떨어집니다.\n3시 혹은 9시로 돌아 12시 방향으로 이동하며 미사일과 노란 난사장판을 피합니다.\n이후 보스가 양 옆으로 쏘는 총을 같은 방향으로 돌면서 피해줍니다.\n외곽 장판이 4번 터지면 반대방향으로 회전하니 그에 맞춰 돌아줍니다.\n\n[2페이즈]\n보스가 난사를 멈추며, 폭탄이 하나 떨어집니다.\n이 폭탄은 보스의 부채꼴 장판으로 터트려야하니\n보스와 폭탄 사이에 모였다가 부채꼴 장판이 고정되면 피해줍니다.\n폭탄은 총 두 번 떨어집니다.\n\n[3페이즈]\n파티 번호 X3 번 방향으로 움직입니다.\n과녁 표시된 공이 각 파티원을 따라다니니 다같이 시계방향으로 돌며 피해줍니다."/>
+                    android:text="보스가 가운데로 이동하고 쇼타임 애니메이션이 나옵니다.\n\n[1페이즈]\n파티원 모두 6시로 이동합니다.\n랜덤하게 2명의 파티원이 타겟이 되며 미사일이 떨어집니다.\n3시 혹은 9시로 돌아 12시 방향으로 이동하며 미사일과 노란 난사장판을 피합니다.\n이후 보스가 양 옆으로 쏘는 총을 같은 방향으로 돌면서 피해줍니다.\n외곽 장판이 4번 터지면 반대방향으로 회전하니 그에 맞춰 돌아줍니다.\n\n[2페이즈]\n보스가 난사를 멈추며, 폭탄이 하나 떨어집니다.\n이 폭탄은 보스의 부채꼴 장판으로 터트려야하니\n보스와 폭탄 사이에 모였다가 부채꼴 장판이 고정되면 피해줍니다.\n폭탄은 총 두 번 생성됩니다.\n\n[3페이즈]\n파티 번호 X3 번 방향으로 움직입니다.\n과녁 표시된 공이 각 파티원을 따라다니니 다같이 시계방향으로 돌며 피해줍니다."/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:gravity="center">
+                android:gravity="center"
+                android:background="@color/gray">
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
@@ -455,6 +480,8 @@
                 android:layout_weight="2.5"
                 android:visibility="gone">
                 <TextView
+                    android:id="@+id/threeMarioInfo"
+                    android:bufferType="spannable"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:textSize="18sp"
@@ -466,7 +493,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:gravity="center">
+                android:gravity="center"
+                android:background="@color/gray">
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
@@ -498,6 +526,8 @@
                 android:layout_weight="2.5"
                 android:visibility="gone">
                 <TextView
+                    android:id="@+id/threeOtherInfo"
+                    android:bufferType="spannable"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:textSize="18sp"
@@ -509,7 +539,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:gravity="center">
+                android:gravity="center"
+                android:background="@color/gray">
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
@@ -541,6 +572,8 @@
                 android:layout_weight="2.5"
                 android:visibility="gone">
                 <TextView
+                    android:id="@+id/fourMarioInfo"
+                    android:bufferType="spannable"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:textSize="18sp"
@@ -552,7 +585,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:gravity="center">
+                android:gravity="center"
+                android:background="@color/gray">
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
@@ -584,6 +618,8 @@
                 android:layout_weight="2.5"
                 android:visibility="gone">
                 <TextView
+                    android:id="@+id/fourOtherInfo"
+                    android:bufferType="spannable"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:textSize="18sp"

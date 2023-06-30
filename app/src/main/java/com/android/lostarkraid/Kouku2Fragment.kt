@@ -18,6 +18,25 @@ class Kouku2Fragment : Fragment() {
         binding = FragmentKouku2Binding.inflate(inflater, container, false)
         mActivity = activity as MainActivity
 
+        val chooseWhereTextEffectArray = arrayOf(arrayOf(0,1,4), arrayOf(54,58,4), arrayOf(60,62,1), arrayOf(68,72,4), arrayOf(74,77,1))
+        val randomTextEffectArray = arrayOf(arrayOf(0,1,3), arrayOf(29,34,1), arrayOf(61,66,2), arrayOf(75,80,4))
+        val oneTwoFiveTextEffectArray = arrayOf(arrayOf(0,1,1), arrayOf(68,70,1))
+        val oneOneOneTextEffectArray = arrayOf(arrayOf(0,1,7), arrayOf(34,36,4), arrayOf(78,81,1), arrayOf(86,90,4), arrayOf(97,101,1)
+            , arrayOf(105,109,1), arrayOf(113,117,4), arrayOf(118,122,2))
+        val nineSixTextEffectArray = arrayOf(arrayOf(0,1,1), arrayOf(68,78,4))
+        val sevenSevneTextEffectArray = arrayOf(arrayOf(0,1,4), arrayOf(139,142,4), arrayOf(173,176,1), arrayOf(228,231,1), arrayOf(302,309,1))
+        val fiveFiveTextEffectArray = arrayOf(arrayOf(0,1,3), arrayOf(28,30,4), arrayOf(51,55,4), arrayOf(122,125,4))
+        val twoSixTextEffectArray = arrayOf(arrayOf(0,1,1), arrayOf(68,78,4))
+
+        mActivity.setTextEffect(chooseWhereTextEffectArray, binding.chooseWhereInfo)
+        mActivity.setTextEffect(randomTextEffectArray, binding.randomInfo)
+        mActivity.setTextEffect(oneTwoFiveTextEffectArray, binding.oneTwoFiveInfo)
+        mActivity.setTextEffect(oneOneOneTextEffectArray, binding.oneOneOneInfo)
+        mActivity.setTextEffect(nineSixTextEffectArray, binding.nineSixInfo)
+        mActivity.setTextEffect(sevenSevneTextEffectArray, binding.sevenSevenInfo)
+        mActivity.setTextEffect(fiveFiveTextEffectArray, binding.fiveFiveInfo)
+        mActivity.setTextEffect(twoSixTextEffectArray, binding.twoSixInfo)
+
         setBtnEventListener()
 
         // Inflate the layout for this fragment

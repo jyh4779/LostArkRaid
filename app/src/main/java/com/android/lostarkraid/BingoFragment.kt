@@ -212,6 +212,16 @@ class BingoFragment : Fragment(), View.OnClickListener {
         binding.fourTwo.setOnClickListener(this)
         binding.fourThree.setOnClickListener(this)
         binding.fourFour.setOnClickListener(this)
+
+        binding.ruleBtn.setOnClickListener{
+            if(binding.ruleText.getVisibility() == View.GONE) {
+                binding.ruleText.setVisibility(View.VISIBLE)
+                binding.ruleBtn.setImageResource(R.drawable.up)
+            } else if(binding.ruleText.getVisibility() == View.VISIBLE) {
+                binding.ruleText.setVisibility(View.GONE)
+                binding.ruleBtn.setImageResource(R.drawable.down)
+            }
+        }
     }
 
     override fun onClick(v:View){

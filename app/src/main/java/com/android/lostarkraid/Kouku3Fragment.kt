@@ -18,6 +18,25 @@ class Kouku3Fragment : Fragment() {
         binding = FragmentKouku3Binding.inflate(inflater, container, false)
         mActivity = activity as MainActivity
 
+        val defaultTextEffectArray = arrayOf(arrayOf(0,1,3), arrayOf(21,23,4), arrayOf(59,70,1), arrayOf(146,156,4))
+        val randomTextEffectArray = arrayOf(arrayOf(0,1,1), arrayOf(8,12,1))
+        val oneOtherTextEffectArray = arrayOf(arrayOf(0,1,2), arrayOf(87,91,2), arrayOf(110,113,4))
+        val twoOtherTextEffectArray = arrayOf(arrayOf(0,1,2), arrayOf(87,90,2), arrayOf(109,112,4))
+        val nintyTextEffectArray = arrayOf(arrayOf(0,1,6), arrayOf(46,48,4), arrayOf(102,109,4),
+            arrayOf(182,184,1), arrayOf(316,320,1),arrayOf(335,344,2), arrayOf(385,390,4))
+        val threeOtherTextEffectArray = arrayOf(arrayOf(0,1,2), arrayOf(87,94,2), arrayOf(113,116,4))
+        val fourOtherTextEffectArray = arrayOf(arrayOf(0,1,5), arrayOf(87,94,2), arrayOf(126,132,1),
+            arrayOf(135,138,4), arrayOf(160,164,4), arrayOf(190,198,1))
+
+        mActivity.setTextEffect(defaultTextEffectArray,binding.defaultInfo)
+        mActivity.setTextEffect(randomTextEffectArray,binding.randomInfo)
+        mActivity.setTextEffect(oneOtherTextEffectArray,binding.oneOtherInfo)
+        mActivity.setTextEffect(twoOtherTextEffectArray,binding.twoOtherInfo)
+        mActivity.setTextEffect(nintyTextEffectArray,binding.nintyInfo)
+        mActivity.setTextEffect(threeOtherTextEffectArray,binding.threeOtherInfo)
+        mActivity.setTextEffect(fourOtherTextEffectArray,binding.fourOtherInfo)
+
+
         setBtnEventListener()
 
         // Inflate the layout for this fragment

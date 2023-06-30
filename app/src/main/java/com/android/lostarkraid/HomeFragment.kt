@@ -22,7 +22,7 @@ class HomeFragment : Fragment() {
         val mActivity = activity as MainActivity
 
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
-        binding.baltanBtn.setOnClickListener {
+        /*binding.baltanBtn.setOnClickListener {
             if(binding.baltanLayout.getVisibility() == View.INVISIBLE) {
                 binding.baltanLayout.setVisibility(View.VISIBLE)
             } else if(binding.baltanLayout.getVisibility() == View.VISIBLE) {
@@ -51,12 +51,12 @@ class HomeFragment : Fragment() {
             } else if(binding.abrelLayout.getVisibility() == View.VISIBLE) {
                 binding.abrelLayout.setVisibility(View.INVISIBLE)
             }
-        }
+        }*/
 
-        binding.btHardBtn.setOnClickListener {
+        binding.baltanBtn.setOnClickListener {
             mActivity.changeFrament("BTHARD1")
         }
-        binding.kkNormalBtn.setOnClickListener {
+        binding.koukuBtn.setOnClickListener {
             mActivity.changeFrament("KK1")
         }
 
