@@ -69,6 +69,24 @@ class MainActivity : FragmentActivity() {
                     .replace(R.id.frameLayout,BaltanHard2Fragment())
                     .commit()
             }
+            "BKNORMAL1" -> {
+                supportFragmentManager
+                    .beginTransaction()
+                    .replace(R.id.frameLayout,BiaKisNormal1Fragment())
+                    .commit()
+            }
+            "BKNORMAL2" -> {
+                supportFragmentManager
+                    .beginTransaction()
+                    .replace(R.id.frameLayout,BiaKisNormal2Fragment())
+                    .commit()
+            }
+            "BKNORMAL3" -> {
+                supportFragmentManager
+                    .beginTransaction()
+                    .replace(R.id.frameLayout,BiaKisNormal3Fragment())
+                    .commit()
+            }
             "KK1" -> {
                 supportFragmentManager
                     .beginTransaction()

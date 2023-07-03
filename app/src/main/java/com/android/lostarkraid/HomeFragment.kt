@@ -56,6 +56,9 @@ class HomeFragment : Fragment() {
         binding.baltanBtn.setOnClickListener {
             mActivity.changeFrament("BTHARD1")
         }
+        binding.biakisBtn.setOnClickListener {
+            mActivity.changeFrament("BKNORMAL1")
+        }
         binding.koukuBtn.setOnClickListener {
             mActivity.changeFrament("KK1")
         }
