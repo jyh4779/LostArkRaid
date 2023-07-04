@@ -2,7 +2,6 @@ package com.android.lostarkraid
 
 import android.graphics.Color
 import android.graphics.Typeface
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.SpannableStringBuilder
 import android.text.Spanned
@@ -14,9 +13,9 @@ import android.view.View
 import android.view.Window
 import android.widget.TextView
 import androidx.fragment.app.FragmentActivity
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.ViewModelProvider
 import com.android.lostarkraid.databinding.ActivityMainBinding
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.MobileAds
 
 class MainActivity : FragmentActivity() {
     lateinit var binding : ActivityMainBinding
@@ -34,12 +33,21 @@ class MainActivity : FragmentActivity() {
             .add(R.id.frameLayout,HomeFragment())
         transaction.commit()
 
+        //admob ads
+        MobileAds.initialize(this)
+        val adRequst = AdRequest.Builder().build()
+        binding.adBannerView.loadAd(adRequst)
+
+        setMenuClickListener()
+
+    }
+    fun setMenuClickListener(){
         binding.homeBtn.setOnClickListener{
-            supportFragmentManager
-                .beginTransaction()
-                .replace(R.id.frameLayout,HomeFragment())
-                .commit()
-            binding.drawerLayout.closeDrawer(Gravity.RIGHT)
+        supportFragmentManager
+            .beginTransaction()
+            .replace(R.id.frameLayout,HomeFragment())
+            .commit()
+        binding.drawerLayout.closeDrawer(Gravity.RIGHT)
         }
 
         binding.home2Btn.setOnClickListener{
@@ -74,7 +82,6 @@ class MainActivity : FragmentActivity() {
                 binding.menuKoukuLayout.setVisibility(View.GONE)
             }
         }
-
         binding.menuBaltan1Btn.setOnClickListener {
             binding.drawerLayout.closeDrawer(Gravity.RIGHT)
             changeFrament("BTHARD1")
@@ -112,6 +119,7 @@ class MainActivity : FragmentActivity() {
             changeFrament("BINGORESET")
         }
     }
+
     fun changeFrament (raid: String){
         when(raid){
             "HOME" -> {
