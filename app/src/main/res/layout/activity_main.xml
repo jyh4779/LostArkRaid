@@ -23,12 +23,13 @@
                 android:layout_weight="1"
                 android:orientation="horizontal"
                 android:background="@color/cardview_dark_background">
+
                 <Button
-                    android:id="@+id/menuBtn"
+                    android:id="@+id/home2Btn"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="2"
-                    android:text="Menu"
+                    android:text="Home"
                     android:layout_margin="3dp"/>
                 <TextView
                     android:layout_width="0dp"
@@ -37,10 +38,13 @@
                     android:gravity="center"
                     android:textSize="18sp"
                     android:text="로스트아크 레이드 도우미"/>
-                <TextView
+                <Button
+                    android:id="@+id/menuBtn"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="2"/>
+                    android:layout_weight="2"
+                    android:text="Menu"
+                    android:layout_margin="3dp"/>
             </LinearLayout>
             <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/frameLayout"
@@ -50,27 +54,250 @@
                 tools:layout="@layout/fragment_home"/>
         </LinearLayout>
         <LinearLayout
-            android:layout_width="150dp"
-            android:layout_height="200dp"
-            android:layout_gravity="left"
-            android:gravity="center"
+            android:layout_width="130dp"
+            android:layout_height="400dp"
+            android:layout_gravity="right"
+            android:gravity="top|left"
             android:orientation="vertical"
-            android:paddingTop="15dp">
+            android:background="@color/gray"
+            android:paddingTop="10dp">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="25sp"
                 android:text="Menu"
                 android:textColor="@color/black"/>
-            <Button
+            <TextView
                 android:id="@+id/homeBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="레이드\n기믹 도우미"/>
-            <Button
-                android:id="@+id/dolBtn"
+                android:text="HOME"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:background="@android:color/transparent"/>
+            <TextView
+                android:id="@+id/menuBaltanBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="쿠크세이튼\n빙고게임"/>
+                android:text="발탄"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:background="@android:color/transparent"/>
+            <LinearLayout
+                android:id="@+id/menuBaltanLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone">
+                <LinearLayout
+                    android:layout_width="10dp"
+                    android:layout_height="match_parent"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:layout_gravity="center"
+                            android:layout_width="18sp"
+                            android:layout_height="18sp"
+                            android:src="@drawable/breakingline"/>
+                        <TextView
+                            android:id="@+id/menuBaltan1Btn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:background="@android:color/transparent"
+                            android:textColor="@color/black"
+                            android:text="1관문"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:layout_gravity="center"
+                            android:layout_width="18sp"
+                            android:layout_height="18sp"
+                            android:src="@drawable/breakingline"/>
+                        <TextView
+                            android:id="@+id/menuBaltan2Btn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:background="@android:color/transparent"
+                            android:textColor="@color/black"
+                            android:text="2관문"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <TextView
+                android:id="@+id/menuBiakisBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="비아키스"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:background="@android:color/transparent"/>
+            <LinearLayout
+                android:id="@+id/menuBiaKisLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone">
+                <LinearLayout
+                    android:layout_width="10dp"
+                    android:layout_height="match_parent"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:layout_gravity="center"
+                            android:layout_width="18sp"
+                            android:layout_height="18sp"
+                            android:src="@drawable/breakingline"/>
+                        <TextView
+                            android:id="@+id/menuBiakis1Btn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:background="@android:color/transparent"
+                            android:textColor="@color/black"
+                            android:text="1관문"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:layout_gravity="center"
+                            android:layout_width="18sp"
+                            android:layout_height="18sp"
+                            android:src="@drawable/breakingline"/>
+                        <TextView
+                            android:id="@+id/menuBiakis2Btn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:background="@android:color/transparent"
+                            android:textColor="@color/black"
+                            android:text="2관문"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:layout_gravity="center"
+                            android:layout_width="18sp"
+                            android:layout_height="18sp"
+                            android:src="@drawable/breakingline"/>
+                        <TextView
+                            android:id="@+id/menuBiakis3Btn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:background="@android:color/transparent"
+                            android:textColor="@color/black"
+                            android:text="3관문"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <TextView
+                android:id="@+id/menuKoukuBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="쿠크세이튼"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:background="@android:color/transparent"/>
+            <LinearLayout
+                android:id="@+id/menuKoukuLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone">
+                <LinearLayout
+                    android:layout_width="10dp"
+                    android:layout_height="match_parent"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:layout_gravity="center"
+                            android:layout_width="18sp"
+                            android:layout_height="18sp"
+                            android:src="@drawable/breakingline"/>
+                        <TextView
+                            android:id="@+id/menuKouku1Btn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:background="@android:color/transparent"
+                            android:textColor="@color/black"
+                            android:text="1관문"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:layout_gravity="center"
+                            android:layout_width="18sp"
+                            android:layout_height="18sp"
+                            android:src="@drawable/breakingline"/>
+                        <TextView
+                            android:id="@+id/menuKouku2Btn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:background="@android:color/transparent"
+                            android:textColor="@color/black"
+                            android:text="2관문"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:layout_gravity="center"
+                            android:layout_width="18sp"
+                            android:layout_height="18sp"
+                            android:src="@drawable/breakingline"/>
+                        <TextView
+                            android:id="@+id/menuKouku3Btn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:background="@android:color/transparent"
+                            android:textColor="@color/black"
+                            android:text="3관문"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:layout_gravity="center"
+                            android:layout_width="18sp"
+                            android:layout_height="18sp"
+                            android:src="@drawable/breakingline"/>
+                        <TextView
+                            android:id="@+id/menuBingoBtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:background="@android:color/transparent"
+                            android:textColor="@color/black"
+                            android:text="빙고도우미"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
         </LinearLayout>
     </androidx.drawerlayout.widget.DrawerLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

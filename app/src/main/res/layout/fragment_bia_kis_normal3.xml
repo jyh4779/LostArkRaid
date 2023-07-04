@@ -90,13 +90,13 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="8"
-                    android:text="[기본설정] - 똥 장판"
+                    android:text="[기본설정] – 매혹게이지"
                     android:gravity="center"
                     android:textSize="18sp"
                     android:textColor="@color/black"/>
 
                 <ImageView
-                    android:id="@+id/defaultBtn"
+                    android:id="@+id/gaugeBtn"
                     android:layout_width="0dp"
                     android:layout_height="40dp"
                     android:layout_weight="1"
@@ -104,7 +104,7 @@
                     android:src="@drawable/down" />
             </LinearLayout>
             <LinearLayout
-                android:id="@+id/defaultText"
+                android:id="@+id/gaugeText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:visibility="gone">
@@ -115,7 +115,7 @@
                     android:paddingTop="5dp"
                     android:paddingLeft="5dp"
                     android:gravity="left"
-                    android:text="레이드 진행 중, 무작위로 발 맡에 똥 장판이 생성됩니다.\n장판이 생성되면 잠시후 기절 구슬을 쏘는 똥이 생성됩니다.\n구슬이 바깥으로 향하도록 장판이 생기면 맵 외곽으로 이동하여 바깥쪽을 바라봅니다."/>
+                    android:text="보스에게 피해를 받거나 특정 장판을 밟을 경우 매혹게이지가 채워집니다.\n매혹게이지가 모두 차면 매혹상태가 되어 파티원을 공격합니다.\n매혹이 된 파티원은 수면폭탄을 맞추어 풀어줍니다.\n\n3관문의 딜은 매혹게이지에 비례하니 적당량을 유지합니다."/>
             </LinearLayout>
 
             <LinearLayout
@@ -135,12 +135,12 @@
                     android:layout_height="match_parent"
                     android:layout_weight="8"
                     android:gravity="center"
-                    android:text="보접빨핀 날개 자리 정하기"
+                    android:text="[기본설정] – 매혹장판"
                     android:textColor="@color/black"
                     android:textSize="18sp" />
 
                 <ImageView
-                    android:id="@+id/purpleRedBtn"
+                    android:id="@+id/jangpanBtn"
                     android:layout_width="0dp"
                     android:layout_height="40dp"
                     android:layout_weight="1"
@@ -148,21 +148,19 @@
                     android:gravity="center"/>
             </LinearLayout>
             <LinearLayout
-                android:id="@+id/purpleRedText"
+                android:id="@+id/jangpanText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="2.5"
                 android:visibility="gone">
                 <TextView
-                    android:id="@+id/purpleRedInfo"
-                    android:bufferType="spannable"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:textSize="18sp"
                     android:paddingTop="5dp"
                     android:paddingLeft="5dp"
                     android:gravity="left"
-                    android:text="5시, 7시, 11시에 각각 2명씩 위치와 구슬 먹을 순서를 정합니다.\n나머지 2 공대원은 각 위치에서 브리핑을 확인 후 움직이는 스페어가 됩니다.\n이 자리는 검빨 구슬 패턴에서 사용합니다."/>
+                    android:text="보스가 특정 타이밍에 매혹장판을 생성하는 오오라를 발 밑에 생성합니다.\n이 장판을 밟으면 매혹게이지가 빠르게 오르니, 맵 외곽에 깔아주도록 합니다."/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -181,12 +179,12 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="8"
-                    android:text="검빨 구슬 자리 정하기"
+                    android:text="[기본설정] – 노란구슬"
                     android:gravity="center"
                     android:textSize="18sp"
                     android:textColor="@color/black"/>
                 <ImageView
-                    android:id="@+id/blackRedBtn"
+                    android:id="@+id/yellowBtn"
                     android:layout_width="0dp"
                     android:layout_height="40dp"
                     android:layout_weight="1"
@@ -194,13 +192,13 @@
                     android:gravity="center"/>
             </LinearLayout>
             <LinearLayout
-                android:id="@+id/blackRedText"
+                android:id="@+id/yellowText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="2.5"
                 android:visibility="gone">
                 <TextView
-                    android:id="@+id/blackRedInfo"
+                    android:id="@+id/yellowInfo"
                     android:bufferType="spannable"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -208,7 +206,7 @@
                     android:paddingTop="5dp"
                     android:paddingLeft="5dp"
                     android:gravity="left"
-                    android:text="5시, 7시, 11시에 각각 2명씩 위치와 구슬 먹을 순서를 정합니다.\n나머지 2 공대원은 각 위치에서 브리핑을 확인 후 움직이는 스페어가 됩니다.\n이 자리는 검빨 구슬 패턴에서 사용합니다."/>
+                    android:text="맵의 3시, 6시, 9시, 12시에 노란구슬이 준비되어있습니다.\n이 구슬을 사용하면 매혹게이지를 낮춰주는 장판이 생성됩니다.\n주요 기믹때 사용될 수 있으니 꼭 필요할 때 사용합니다."/>
             </LinearLayout>
 
             <LinearLayout
@@ -222,7 +220,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="3"
                     android:gravity="left|center"
-                    android:text="Line 120"
+                    android:text="Line 170"
                     android:textColor="@color/black"
                     android:textSize="18sp" />
 
@@ -230,12 +228,12 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="8"
-                    android:text="[보접빨핀]  - 외곽"
+                    android:text="절망의 늪"
                     android:gravity="center"
                     android:textSize="18sp"
                     android:textColor="@color/black"/>
                 <ImageView
-                    android:id="@+id/oneTwoSideBtn"
+                    android:id="@+id/oneSevenBtn"
                     android:layout_width="0dp"
                     android:layout_height="40dp"
                     android:layout_weight="1"
@@ -243,13 +241,13 @@
                     android:gravity="center"/>
             </LinearLayout>
             <LinearLayout
-                android:id="@+id/oneTwoSideText"
+                android:id="@+id/oneSevenText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="2.5"
                 android:visibility="gone">
                 <TextView
-                    android:id="@+id/oneTwoSideInfo"
+                    android:id="@+id/oneSevenInfo"
                     android:bufferType="spannable"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -257,7 +255,7 @@
                     android:paddingTop="5dp"
                     android:paddingLeft="5dp"
                     android:gravity="left"
-                    android:text="“욕망의 환영을 소환하였습니다” 라는 가이드가 나옵니다.\n\n3시, 7시, 11시에 비아키스의 분신이 나옵니다.\n분신의 날개를 보고 모두 접혀있으면 위치+접(3ㅈ, 7ㅈ)\n하나만 접혀있으면 위치+반접(7ㅂ, 11ㅂ)\n모두 펴져있으면 위치+핀(3ㅍ, 7ㅍ) 브리핑을 합니다."/>
+                    android:text="보스가 가운데로 이동하며 외곽에 빨간 원을 그립니다.\n이후 파티원 5명에겐 ‘신속의욕망’ 3명에겐 ‘절망의 늪’ 버프가 생깁니다.\n\n[절망의늪]\n잠시 후 바닥에 이동속도 감소 장판이 생성됩니다.\n9시에 다른 절망의늪 장판과 겹치지 않도록 장판을 생성하고\n장판의 오른쪽 끝으로 이동합니다.\n\n[신속의욕망]\n잠시 후 바닥에 이동속도 증가 장판이 생성됩니다.\n7시 혹은 11시에 장판을 생성하고 9시의 늪의 왼쪽 끝으로 이동합니다."/>
             </LinearLayout>
 
             <LinearLayout
@@ -269,7 +267,7 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="3"
-                    android:text="Line 120"
+                    android:text="Line 152"
                     android:gravity="left|center"
                     android:textSize="18sp"
                     android:textColor="@color/black"/>
@@ -277,12 +275,12 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="8"
-                    android:text="[보접빨핀]  - 내부"
+                    android:text="석상, 칼"
                     android:gravity="center"
                     android:textSize="18sp"
                     android:textColor="@color/black"/>
                 <ImageView
-                    android:id="@+id/oneTwoInBtn"
+                    android:id="@+id/oneFiveTwoBtn"
                     android:layout_width="0dp"
                     android:layout_height="40dp"
                     android:layout_weight="1"
@@ -290,13 +288,13 @@
                     android:gravity="center"/>
             </LinearLayout>
             <LinearLayout
-                android:id="@+id/oneTwoInText"
+                android:id="@+id/oneFiveTwoText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="2.5"
                 android:visibility="gone">
                 <TextView
-                    android:id="@+id/oneTwoInInfo"
+                    android:id="@+id/oneFiveTwoInfo"
                     android:bufferType="spannable"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -304,7 +302,53 @@
                     android:paddingTop="5dp"
                     android:paddingLeft="5dp"
                     android:gravity="left"
-                    android:text="“욕망의 환영을 소환하였습니다” 라는 가이드가 나옵니다.\n\n본인의 위치에 생성되는 구슬을 먹고 가운데로 모입니다.\n구슬을 먹으면 머리위에 표식이 생깁니다.\n5개의 표식 보라색이 많은지, 빨간색이 많은지 찾습니다."/>
+                    android:text="보스가 사라지고 주변에 칼 혹은 석상 모형이 나타납니다.\n매혹게이지 70% 이상 파티원에게는 칼이,\n매혹게이지 70% 이하 파티원에게는 석상이 보입니다.\n\n[칼]\n칼이 보이는 파티원은 칼 위치를 핑을 찍어줍니다.\n이후 석상 파티원이 이동하는 곳으로 따라갑니다.\n\n[석상]\n칼 위치의 핑을 보고 석상의 위치가 겹치는 곳으로 이동합니다."/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:background="@color/gray">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:text="Line 135"
+                    android:gravity="left|center"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="8"
+                    android:text="한컴타자패턴 (아재패턴)"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"/>
+                <ImageView
+                    android:id="@+id/oneThreeFiveBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/down"
+                    android:gravity="center"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/oneThreeFiveText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.5"
+                android:visibility="gone">
+                <TextView
+                    android:id="@+id/oneThreeFiveInfo"
+                    android:bufferType="spannable"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textSize="18sp"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="5dp"
+                    android:gravity="left"
+                    android:text="“비아키스가 치명적인 유혹을 준비합니다”라는 가이드가 나오며, 보스가 하늘로 날아갑니다.\n잠시 후 순서대로 키보드를 눌러야하는 한컴타자패턴(아재패턴)이 나옵니다.\n\n이때 제한시간은 매혹게이지와 반비례하니\n가이드와 동시에 12시에 모여 노란구슬을 사용해 매혹게이지를 줄여줍니다."/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -323,12 +367,12 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="8"
-                    android:text="[보접빨핀] – 공통"
+                    android:text="매혹"
                     android:gravity="center"
                     android:textSize="18sp"
                     android:textColor="@color/black"/>
                 <ImageView
-                    android:id="@+id/oneTwoAllBtn"
+                    android:id="@+id/oneTwoBtn"
                     android:layout_width="0dp"
                     android:layout_height="40dp"
                     android:layout_weight="1"
@@ -336,13 +380,13 @@
                     android:gravity="center"/>
             </LinearLayout>
             <LinearLayout
-                android:id="@+id/oneTwoAllText"
+                android:id="@+id/oneTwoText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="2.5"
                 android:visibility="gone">
                 <TextView
-                    android:id="@+id/oneTwoAllInfo"
+                    android:id="@+id/oneTwoInfo"
                     android:bufferType="spannable"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -350,7 +394,7 @@
                     android:paddingTop="5dp"
                     android:paddingLeft="5dp"
                     android:gravity="left"
-                    android:text="보접빨핀 을 기억합니다.\n보라색이 많다면 접 - 반접 - 핀 순서로\n빨간색이 많다면 핀 - 반접 - 접 순서로 이동합니다."/>
+                    android:text="모든 파티원에게 매혹장판이 생성됩니다.\n이때는 전원 매혹상태가 되어야하니, 한 곳에 모여 매혹장판을 밟고 있도록 합니다."/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -361,7 +405,7 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="3"
-                    android:text="Line 90"
+                    android:text="Line 102"
                     android:gravity="left|center"
                     android:textSize="18sp"
                     android:textColor="@color/black"/>
@@ -369,12 +413,12 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="8"
-                    android:text="와플패턴"
+                    android:text="무력화"
                     android:gravity="center"
                     android:textSize="18sp"
                     android:textColor="@color/black"/>
                 <ImageView
-                    android:id="@+id/nintyBtn"
+                    android:id="@+id/oneZeroTwoBtn"
                     android:layout_width="0dp"
                     android:layout_height="40dp"
                     android:layout_weight="1"
@@ -382,13 +426,13 @@
                     android:gravity="center"/>
             </LinearLayout>
             <LinearLayout
-                android:id="@+id/nintyText"
+                android:id="@+id/oneZeroTwoText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="2.5"
                 android:visibility="gone">
                 <TextView
-                    android:id="@+id/nintyInfo"
+                    android:id="@+id/oneZeroTwoInfo"
                     android:bufferType="spannable"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -396,7 +440,7 @@
                     android:paddingTop="5dp"
                     android:paddingLeft="5dp"
                     android:gravity="left"
-                    android:text="보스가 가운데로 이동하며, 4개의 빨간 벽을 회전시킵니다.\n이 벽에 닿으면 밀려나니, 회전하는 벽과 바닥의 장판도 피해줍니다."/>
+                    android:text="보스가 가운데로 이동하고 1시와 7시에 폭발하는 고래를 생성합니다.\n3시에 모여 노란구슬을 사용 후, 회오리폭탄을 사용하여 보스를 무력화 합니다.\n무력화에 성공해도 고래가 폭발하니 무력화 성공 후 시간정지물약을 사용합니다."/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -407,7 +451,7 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="3"
-                    android:text="Line 65"
+                    android:text="Line 75"
                     android:gravity="left|center"
                     android:textSize="18sp"
                     android:textColor="@color/black"/>
@@ -415,12 +459,12 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="8"
-                    android:text="검빨 구슬"
+                    android:text="절망의 늪"
                     android:gravity="center"
                     android:textSize="18sp"
                     android:textColor="@color/black"/>
                 <ImageView
-                    android:id="@+id/sixFiveBtn"
+                    android:id="@+id/sevenFiveBtn"
                     android:layout_width="0dp"
                     android:layout_height="40dp"
                     android:layout_weight="1"
@@ -428,13 +472,13 @@
                     android:gravity="center"/>
             </LinearLayout>
             <LinearLayout
-                android:id="@+id/sixFiveText"
+                android:id="@+id/sevenFiveText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="2.5"
                 android:visibility="gone">
                 <TextView
-                    android:id="@+id/sixFiveInfo"
+                    android:id="@+id/sevenFiveInfo"
                     android:bufferType="spannable"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -442,7 +486,7 @@
                     android:paddingTop="5dp"
                     android:paddingLeft="5dp"
                     android:gravity="left"
-                    android:text="“검은 욕망의 에너지를 흡수한다는 가이드가 나옵니다.\n5시, 7시, 11시에 분신이 나타납니다.\n빨간색 혹은 검은색 파장을 5번 터트리는데, 순서를 기억해야합니다.\n\n각 위치 1번은 위치+빨검 순서를 브리핑하여 스페어가 알 수 있도록 합니다.\n이후 분신이 가운데 방향으로 검은색 구슬을 5번 쏘는데\n위에서 기억했던 순서 중, 검은색 파장의 구슬을 먹어줍니다."/>
+                    android:text="보스가 가운데로 이동하며 외곽에 빨간 원을 그립니다.\n이후 파티원 5명에겐 ‘신속의욕망’ 3명에겐 ‘절망의 늪’ 버프가 생깁니다.\n\n[절망의늪]\n잠시 후 바닥에 이동속도 감소 장판이 생성됩니다.\n9시에 다른 절망의늪 장판과 겹치지 않도록 장판을 생성하고\n장판의 오른쪽 끝으로 이동합니다.\n\n[신속의욕망]\n잠시 후 바닥에 이동속도 증가 장판이 생성됩니다.\n7시 혹은 11시에 장판을 생성하고 9시의 늪의 왼쪽 끝으로 이동합니다."/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -453,7 +497,7 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="3"
-                    android:text="Line 30"
+                    android:text="Line 55"
                     android:gravity="left|center"
                     android:textSize="18sp"
                     android:textColor="@color/black"/>
@@ -461,12 +505,12 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="8"
-                    android:text="와플패턴"
+                    android:text="촉수(1파티는 오른쪽, 2파티는 왼쪽)"
                     android:gravity="center"
                     android:textSize="18sp"
                     android:textColor="@color/black"/>
                 <ImageView
-                    android:id="@+id/thrtyBtn"
+                    android:id="@+id/fiveFiveBtn"
                     android:layout_width="0dp"
                     android:layout_height="40dp"
                     android:layout_weight="1"
@@ -474,13 +518,13 @@
                     android:gravity="center"/>
             </LinearLayout>
             <LinearLayout
-                android:id="@+id/thrtyText"
+                android:id="@+id/fiveFiveText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="2.5"
                 android:visibility="gone">
                 <TextView
-                    android:id="@+id/thrtyInfo"
+                    android:id="@+id/fiveFiveInfo"
                     android:bufferType="spannable"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -488,7 +532,53 @@
                     android:paddingTop="5dp"
                     android:paddingLeft="5dp"
                     android:gravity="left"
-                    android:text="보스가 가운데로 이동하며, 4개의 빨간 벽을 회전시킵니다.\n이 벽에 닿으면 밀려나니, 회전하는 벽과 바닥의 장판도 피해줍니다."/>
+                    android:text="보스가 가운데로 이동하며 매혹게이지가 올라가는 구슬을 사방으로 난사합니다.\n이후 양쪽에서 생성되는 촉수를 모두 파괴해야합니다.\n1파티는 오른쪽, 2파티는 왼쪽을 우선 담당합니다.\n매혹게이지가 70% 이상이 되어야 촉수에게 딜이 들어갑니다.\n이 때는 지속적으로 매혹게이지가 줄어드니 보스가 난사하는 구슬을 조절하며 촉수를 파괴합니다."/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:background="@color/gray">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:text="Line 2"
+                    android:gravity="left|center"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="8"
+                    android:text="무력화"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"/>
+                <ImageView
+                    android:id="@+id/twoBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/down"
+                    android:gravity="center"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/twoText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.5"
+                android:visibility="gone">
+                <TextView
+                    android:id="@+id/twoInfo"
+                    android:bufferType="spannable"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textSize="18sp"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="5dp"
+                    android:gravity="left"
+                    android:text="보스가 포효하며 무적상태가 되며 아래 패턴을 반복합니다.\n체력바 아래의 무력화 게이지를 모두 깎으면 클리어입니다.\n\n[1페이즈]\n맵 중앙에 보라색 분신이 생성되고 3시, 6시, 9시, 12시에도 보스가 나타납니다.\n미니맵을 통해 진짜 보스를 찾아 진짜 보스의 뒤로 이동하여 피해줍니다.\n\n진짜 보스에게 이동할때 생성되는 검은 장판을 밟으면 매혹게이지가 줄어드니, 검은 장판을 밟으며 이동합니다.\n\n[2페이즈]\n보스가 날아오른뒤 2번 공습을 합니다.\n한 곳에 모여 피해줍니다.\n\n[3페이즈]\n보스가 가운데에서 와플패턴을 시행합니다.\n매혹게이지가 지속적으로 오르니 매혹상태에 주의하며 피해줍니다.\n"/>
             </LinearLayout>
 
         </LinearLayout>

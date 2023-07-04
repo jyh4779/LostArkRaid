@@ -8,7 +8,9 @@ import android.text.SpannableStringBuilder
 import android.text.Spanned
 import android.text.style.ForegroundColorSpan
 import android.text.style.StyleSpan
+import android.util.Log
 import android.view.Gravity
+import android.view.View
 import android.view.Window
 import android.widget.TextView
 import androidx.fragment.app.FragmentActivity
@@ -37,26 +39,87 @@ class MainActivity : FragmentActivity() {
                 .beginTransaction()
                 .replace(R.id.frameLayout,HomeFragment())
                 .commit()
-            binding.drawerLayout.closeDrawer(Gravity.LEFT)
+            binding.drawerLayout.closeDrawer(Gravity.RIGHT)
+        }
+
+        binding.home2Btn.setOnClickListener{
+            changeFrament("HOME")
         }
 
         binding.menuBtn.setOnClickListener {
-            if (!binding.drawerLayout.isDrawerOpen(Gravity.LEFT)) {
-                binding.drawerLayout.openDrawer(Gravity.LEFT)
+            if (!binding.drawerLayout.isDrawerOpen(Gravity.RIGHT)) {
+                binding.drawerLayout.openDrawer(Gravity.RIGHT)
             } else {
-                binding.drawerLayout.closeDrawer(Gravity.LEFT)
+                binding.drawerLayout.closeDrawer(Gravity.RIGHT)
             }
         }
-        binding.dolBtn.setOnClickListener{
-            supportFragmentManager
-                .beginTransaction()
-                .replace(R.id.frameLayout,BingoFragment())
-                .commit()
-            binding.drawerLayout.closeDrawer(Gravity.LEFT)
+        binding.menuBaltanBtn.setOnClickListener{
+            if(binding.menuBaltanLayout.getVisibility() == View.GONE) {
+                binding.menuBaltanLayout.setVisibility(View.VISIBLE)
+            } else if(binding.menuBaltanLayout.getVisibility() == View.VISIBLE) {
+                binding.menuBaltanLayout.setVisibility(View.GONE)
+            }
+        }
+        binding.menuBiakisBtn.setOnClickListener{
+            if(binding.menuBiaKisLayout.getVisibility() == View.GONE) {
+                binding.menuBiaKisLayout.setVisibility(View.VISIBLE)
+            } else if(binding.menuBiaKisLayout.getVisibility() == View.VISIBLE) {
+                binding.menuBiaKisLayout.setVisibility(View.GONE)
+            }
+        }
+        binding.menuKoukuBtn.setOnClickListener{
+            if(binding.menuKoukuLayout.getVisibility() == View.GONE) {
+                binding.menuKoukuLayout.setVisibility(View.VISIBLE)
+            } else if(binding.menuKoukuLayout.getVisibility() == View.VISIBLE) {
+                binding.menuKoukuLayout.setVisibility(View.GONE)
+            }
+        }
+
+        binding.menuBaltan1Btn.setOnClickListener {
+            binding.drawerLayout.closeDrawer(Gravity.RIGHT)
+            changeFrament("BTHARD1")
+        }
+        binding.menuBaltan2Btn.setOnClickListener {
+            binding.drawerLayout.closeDrawer(Gravity.RIGHT)
+            changeFrament("BTHARD2")
+        }
+        binding.menuBiakis1Btn.setOnClickListener {
+            binding.drawerLayout.closeDrawer(Gravity.RIGHT)
+            changeFrament("BKNORMAL1")
+        }
+        binding.menuBiakis2Btn.setOnClickListener {
+            binding.drawerLayout.closeDrawer(Gravity.RIGHT)
+            changeFrament("BKNORMAL2")
+        }
+        binding.menuBiakis3Btn.setOnClickListener {
+            binding.drawerLayout.closeDrawer(Gravity.RIGHT)
+            changeFrament("BKNORMAL3")
+        }
+        binding.menuKouku1Btn.setOnClickListener {
+            binding.drawerLayout.closeDrawer(Gravity.RIGHT)
+            changeFrament("KK1")
+        }
+        binding.menuKouku2Btn.setOnClickListener {
+            binding.drawerLayout.closeDrawer(Gravity.RIGHT)
+            changeFrament("KK2")
+        }
+        binding.menuKouku3Btn.setOnClickListener {
+            binding.drawerLayout.closeDrawer(Gravity.RIGHT)
+            changeFrament("KK3")
+        }
+        binding.menuBingoBtn.setOnClickListener {
+            binding.drawerLayout.closeDrawer(Gravity.RIGHT)
+            changeFrament("BINGORESET")
         }
     }
     fun changeFrament (raid: String){
         when(raid){
+            "HOME" -> {
+                supportFragmentManager
+                    .beginTransaction()
+                    .replace(R.id.frameLayout,HomeFragment())
+                    .commit()
+            }
             "BTHARD1" -> {
                 supportFragmentManager
                     .beginTransaction()
@@ -120,6 +183,7 @@ class MainActivity : FragmentActivity() {
         val builder  = SpannableStringBuilder(textData)
 
         for(i in textArray[0][1]..textArray[0][2]){
+            Log.d("setTextEffect","i = ["+i+"]")
             val boldSpan = StyleSpan(Typeface.BOLD)
             builder.setSpan(boldSpan, textArray[i][0], textArray[i][1], Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
 
