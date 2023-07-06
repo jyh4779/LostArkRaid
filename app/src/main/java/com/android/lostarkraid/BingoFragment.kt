@@ -30,7 +30,13 @@ class BingoFragment : Fragment(), View.OnClickListener {
         initClickListener()
 
         binding.resetBtn.setOnClickListener {
-            mActivity.changeFrament("BINGORESET")
+            touchCnt = -1
+            for(i in 0..4){
+                for(j in 0 .. 4){
+                    bingo[i][j] = 0
+                }
+            }
+            chkBingoImage(bingo)
         }
         return binding.root
     }

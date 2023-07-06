@@ -12,11 +12,24 @@ import android.view.Gravity
 import android.view.View
 import android.view.Window
 import android.widget.TextView
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
+import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.FragmentTransaction
 import com.android.lostarkraid.databinding.ActivityMainBinding
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.MobileAds
 
+private const val TAG_HOME_FRAGMENT="home_fragment"
+private const val TAG_BALTAN_FRAGMENT="baltan_hard_fragment"
+private const val TAG_BALTAN2_FRAGMENT="baltan_hard2_fragment"
+private const val TAG_BIAKIS_NORMAL1_FRAGMENT="biakis_normal1_fragment"
+private const val TAG_BIAKIS_NORMAL2_FRAGMENT="biakis_normal2_fragment"
+private const val TAG_BIAKIS_NORMAL3_FRAGMENT="biakis_normal3_fragment"
+private const val TAG_KOUKU1_FRAGMENT="kouku1_fragment"
+private const val TAG_KOUKU2_FRAGMENT="kouku2_fragment"
+private const val TAG_KOUKU3_FRAGMENT="kouku3_fragment"
+private const val TAG_BINGO_FRAGMENT="bingo_fragment"
 class MainActivity : FragmentActivity() {
     lateinit var binding : ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,11 +40,12 @@ class MainActivity : FragmentActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
+        setFragment(TAG_HOME_FRAGMENT,HomeFragment())
 
-        val transaction = supportFragmentManager
+        /*val transaction = supportFragmentManager
             .beginTransaction()
             .add(R.id.frameLayout,HomeFragment())
-        transaction.commit()
+        transaction.commit()*/
 
         //admob ads
         MobileAds.initialize(this)
@@ -41,12 +55,58 @@ class MainActivity : FragmentActivity() {
         setMenuClickListener()
 
     }
+    private fun setFragment(tag: String, fragment: Fragment) {
+        val manager: FragmentManager = supportFragmentManager
+        val ft: FragmentTransaction = manager.beginTransaction()
+
+        if (manager.findFragmentByTag(tag) == null) {
+            ft.add(R.id.frameLayout, fragment, tag)
+        }
+
+        val home = manager.findFragmentByTag(TAG_HOME_FRAGMENT)
+        val baltan = manager.findFragmentByTag(TAG_BALTAN_FRAGMENT)
+        val baltan2 = manager.findFragmentByTag(TAG_BALTAN2_FRAGMENT)
+        val biakisnormal1 = manager.findFragmentByTag(TAG_BIAKIS_NORMAL1_FRAGMENT)
+        val biakisnormal2 = manager.findFragmentByTag(TAG_BIAKIS_NORMAL2_FRAGMENT)
+        val biakisnormal3 = manager.findFragmentByTag(TAG_BIAKIS_NORMAL3_FRAGMENT)
+        val kouku1 = manager.findFragmentByTag(TAG_KOUKU1_FRAGMENT)
+        val kouku2 = manager.findFragmentByTag(TAG_KOUKU2_FRAGMENT)
+        val kouku3 = manager.findFragmentByTag(TAG_KOUKU3_FRAGMENT)
+        val bingo = manager.findFragmentByTag(TAG_BINGO_FRAGMENT)
+
+        // Hide all Fragment
+        if (home != null) {ft.hide(home)}
+        if (baltan != null) {ft.hide(baltan)}
+        if (baltan2 != null) {ft.hide(baltan2)}
+        if (biakisnormal1 != null) {ft.hide(biakisnormal1)}
+        if (biakisnormal2 != null) {ft.hide(biakisnormal2)}
+        if (biakisnormal3 != null) {ft.hide(biakisnormal3)}
+        if (kouku1 != null) {ft.hide(kouku1)}
+        if (kouku2 != null) {ft.hide(kouku2)}
+        if (kouku3 != null) {ft.hide(kouku3)}
+        if (bingo != null) {ft.hide(bingo)}
+
+        // Show  current Fragment
+        when (tag) {
+            TAG_HOME_FRAGMENT -> {if (home != null) {ft.show(home)}}
+            TAG_BALTAN_FRAGMENT -> {if (baltan != null) {ft.show(baltan)}}
+            TAG_BALTAN2_FRAGMENT -> {if (baltan2 != null) {ft.show(baltan2)}}
+            TAG_BIAKIS_NORMAL1_FRAGMENT -> {if (biakisnormal1 != null) {ft.show(biakisnormal1)}}
+            TAG_BIAKIS_NORMAL2_FRAGMENT -> {if (biakisnormal2 != null) {ft.show(biakisnormal2)}}
+            TAG_BIAKIS_NORMAL3_FRAGMENT -> {if (biakisnormal3 != null) {ft.show(biakisnormal3)}}
+            TAG_KOUKU1_FRAGMENT -> {if (kouku1 != null) {ft.show(kouku1)}}
+            TAG_KOUKU2_FRAGMENT -> {if (kouku2 != null) {ft.show(kouku2)}}
+            TAG_KOUKU3_FRAGMENT -> {if (kouku3 != null) {ft.show(kouku3)}}
+            TAG_BINGO_FRAGMENT -> {if (bingo != null) {ft.show(bingo)}}
+        }
+        /*if (tag == TAG_HOME_FRAGMENT) {if (home != null) {ft.show(home)}}
+        if (tag == TAG_BALTAN_FRAGMENT) {if (baltan != null) {ft.show(baltan)}}*/
+
+        ft.commitAllowingStateLoss()
+    }
     fun setMenuClickListener(){
         binding.homeBtn.setOnClickListener{
-        supportFragmentManager
-            .beginTransaction()
-            .replace(R.id.frameLayout,HomeFragment())
-            .commit()
+        changeFrament("HOME")
         binding.drawerLayout.closeDrawer(Gravity.RIGHT)
         }
 
@@ -122,66 +182,22 @@ class MainActivity : FragmentActivity() {
 
     fun changeFrament (raid: String){
         when(raid){
-            "HOME" -> {
-                supportFragmentManager
-                    .beginTransaction()
-                    .replace(R.id.frameLayout,HomeFragment())
-                    .commit()
-            }
-            "BTHARD1" -> {
+            "HOME" -> {setFragment(TAG_HOME_FRAGMENT,HomeFragment())}
+            "BTHARD1" -> {setFragment(TAG_BALTAN_FRAGMENT,BaltanHardFragment())}
+            "BTHARD2" -> {setFragment(TAG_BALTAN2_FRAGMENT,BaltanHard2Fragment())}
+            "BKNORMAL1" -> {setFragment(TAG_BIAKIS_NORMAL1_FRAGMENT,BiaKisNormal1Fragment())}
+            "BKNORMAL2" -> {setFragment(TAG_BIAKIS_NORMAL2_FRAGMENT,BiaKisNormal2Fragment())}
+            "BKNORMAL3" -> {setFragment(TAG_BIAKIS_NORMAL3_FRAGMENT,BiaKisNormal3Fragment())}
+            "KK1" -> {setFragment(TAG_KOUKU1_FRAGMENT,Kouku1Fragment())}
+            "KK2" -> {setFragment(TAG_KOUKU2_FRAGMENT,Kouku2Fragment())}
+            "KK3" -> {setFragment(TAG_KOUKU3_FRAGMENT,Kouku3Fragment())}
+            "BINGORESET" -> {setFragment(TAG_BINGO_FRAGMENT,BingoFragment())}
+            /*"BT1TEST" -> {
                 supportFragmentManager
                     .beginTransaction()
                     .replace(R.id.frameLayout,BaltanHardFragment())
                     .commit()
-            }
-            "BTHARD2" -> {
-                supportFragmentManager
-                    .beginTransaction()
-                    .replace(R.id.frameLayout,BaltanHard2Fragment())
-                    .commit()
-            }
-            "BKNORMAL1" -> {
-                supportFragmentManager
-                    .beginTransaction()
-                    .replace(R.id.frameLayout,BiaKisNormal1Fragment())
-                    .commit()
-            }
-            "BKNORMAL2" -> {
-                supportFragmentManager
-                    .beginTransaction()
-                    .replace(R.id.frameLayout,BiaKisNormal2Fragment())
-                    .commit()
-            }
-            "BKNORMAL3" -> {
-                supportFragmentManager
-                    .beginTransaction()
-                    .replace(R.id.frameLayout,BiaKisNormal3Fragment())
-                    .commit()
-            }
-            "KK1" -> {
-                supportFragmentManager
-                    .beginTransaction()
-                    .replace(R.id.frameLayout,Kouku1Fragment())
-                    .commit()
-            }
-            "KK2" -> {
-                supportFragmentManager
-                    .beginTransaction()
-                    .replace(R.id.frameLayout,Kouku2Fragment())
-                    .commit()
-            }
-            "KK3" -> {
-                supportFragmentManager
-                    .beginTransaction()
-                    .replace(R.id.frameLayout,Kouku3Fragment())
-                    .commit()
-            }
-            "BINGORESET" -> {
-                supportFragmentManager
-                    .beginTransaction()
-                    .replace(R.id.frameLayout,BingoFragment())
-                    .commit()
-            }
+            }*/
         }
     }
 

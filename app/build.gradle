@@ -8,11 +8,11 @@ android {
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.android.lostarkraid"
+        applicationId "jyh.lostarkraid"
         minSdk 21
         targetSdk 33
-        versionCode 1
-        versionName "1.0"
+        versionCode 5
+        versionName "1.5"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -50,4 +50,6 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.5.1"
     //google admob
     implementation 'com.google.android.gms:play-services-ads:22.0.0'
+    //google update version check
+    implementation("com.google.android.play:app-update-ktx:2.0.1")
 }
